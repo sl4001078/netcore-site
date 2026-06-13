@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>NetCore — Networking Reference</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+<link rel="apple-touch-icon" href="data:image/png;base64,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"/>
+<meta name="theme-color" content="#0b0f1a"/>
+<style>
+:root{--bg:#0b0f1a;--sur:#111827;--sur2:#1a2236;--bdr:#1f2d45;--ac:#00d4ff;--ac2:#7c3aed;--ac3:#10b981;--warn:#f59e0b;--danger:#ef4444;--txt:#e2e8f0;--mut:#94a3b8;--code:#0d1117;--mono:'Courier New',monospace;--nh:54px}
+[data-theme=light]{--bg:#f0f4f8;--sur:#fff;--sur2:#e8edf4;--bdr:#cbd5e1;--txt:#1e293b;--mut:#64748b;--code:#f8fafc;--ac:#0284c7;--ac3:#059669}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nh)}
+body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;transition:background .3s,color .3s}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:3px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;height:var(--nh);background:rgba(11,15,26,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;padding:0 1.25rem;gap:0}
+[data-theme=light] nav{background:rgba(240,244,248,.96)}
+.brand{color:var(--ac);font-weight:800;font-size:1.1rem;text-decoration:none;margin-right:auto}
+.nl{display:flex;gap:1.2rem;align-items:center}
+.nl a{color:var(--mut);text-decoration:none;font-size:.8rem;font-weight:500;padding:.2rem 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
+.nl a:hover,.nl a.active{color:var(--ac);border-bottom-color:var(--ac)}
+.nav-act{display:flex;gap:.5rem;align-items:center;margin-left:1rem}
+.ib{background:transparent;border:1px solid var(--bdr);color:var(--mut);border-radius:7px;padding:.3rem .5rem;cursor:pointer;font-size:.85rem;transition:all .2s;line-height:1}
+.ib:hover{border-color:var(--ac);color:var(--ac)}
+.hbg{display:none;flex-direction:column;gap:4px;cursor:pointer;background:none;border:none;padding:.4rem}
+.hbg span{width:18px;height:2px;background:var(--mut);border-radius:2px;transition:all .3s;display:block}
+.hbg.open span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
+.hbg.open span:nth-child(2){opacity:0}
+.hbg.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
+.mmenu{display:none;position:fixed;top:var(--nh);left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bdr);z-index:199;padding:.75rem 1.25rem;flex-direction:column;gap:.4rem}
+.mmenu.open{display:flex}
+.mmenu a{color:var(--mut);text-decoration:none;padding:.55rem .7rem;border-radius:7px;font-size:.88rem;transition:all .2s}
+.mmenu a:hover{background:var(--sur2);color:var(--ac)}
+#rprog{position:fixed;top:var(--nh);left:0;height:2px;background:var(--ac);z-index:199;width:0%;transition:width .1s}
+
+/* SEARCH */
+.sov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:300;align-items:flex-start;justify-content:center;padding-top:6rem}
+.sov.open{display:flex}
+.sbox{background:var(--sur);border:1px solid var(--bdr);border-radius:14px;width:min(620px,92vw);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.sinp{display:flex;align-items:center;gap:.6rem;padding:.8rem 1.1rem;border-bottom:1px solid var(--bdr)}
+.sinp input{flex:1;background:none;border:none;color:var(--txt);font-size:.95rem;outline:none}
+#sres{max-height:360px;overflow-y:auto}
+.sri{padding:.7rem 1.1rem;cursor:pointer;transition:background .15s;border-bottom:1px solid var(--bdr)}
+.sri:hover{background:var(--sur2)}
+.sri .rc{color:var(--ac);font-size:.7rem;font-family:var(--mono)}
+.sri .rt{font-weight:600;font-size:.85rem}
+.sri .rs{color:var(--mut);font-size:.78rem}
+.sempty{padding:2rem;text-align:center;color:var(--mut);font-size:.85rem}
+
+/* TOAST */
+.tc{position:fixed;bottom:1.25rem;right:1.25rem;z-index:500;display:flex;flex-direction:column;gap:.4rem;pointer-events:none}
+.toast{background:var(--sur);border:1px solid var(--bdr);border-radius:9px;padding:.55rem 1rem;font-size:.8rem;color:var(--txt);display:flex;align-items:center;gap:.4rem;pointer-events:auto;transform:translateX(120%);transition:transform .3s;box-shadow:0 4px 20px rgba(0,0,0,.4);max-width:260px}
+.toast.show{transform:translateX(0)}
+.toast.success{border-color:var(--ac3)}
+
+/* BTT */
+#btt{position:fixed;bottom:1.25rem;left:1.25rem;z-index:400;background:var(--sur);border:1px solid var(--bdr);color:var(--mut);border-radius:9px;padding:.45rem .6rem;cursor:pointer;font-size:.85rem;transition:all .3s;opacity:0;pointer-events:none}
+#btt.vis{opacity:1;pointer-events:auto}
+#btt:hover{border-color:var(--ac);color:var(--ac)}
+
+/* BOOKMARKS PANEL */
+#bmpanel{display:none;position:fixed;right:0;top:var(--nh);height:calc(100vh - var(--nh));width:300px;background:var(--sur);border-left:1px solid var(--bdr);z-index:150;overflow-y:auto;padding:1.1rem;transform:translateX(100%);transition:transform .3s}
+#bmpanel.open{display:block;transform:translateX(0)}
+.bmi{background:var(--sur2);border:1px solid var(--bdr);border-radius:8px;padding:.65rem;margin-bottom:.5rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.bmi .bmt{font-size:.8rem;font-weight:600;flex:1}
+.bmi .bmc{font-size:.68rem;color:var(--ac);font-family:var(--mono)}
+.bmr{background:none;border:none;color:var(--mut);cursor:pointer;font-size:.85rem}
+.bmr:hover{color:var(--danger)}
+.bmempty{color:var(--mut);font-size:.83rem;text-align:center;padding:2rem 0}
+
+/* LAYOUT */
+.hero{text-align:center;padding:4.5rem 1.25rem 3.5rem;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(0,212,255,.07) 0%,transparent 70%)}
+.hero h1{font-size:clamp(1.9rem,5vw,3.4rem);font-weight:800;line-height:1.15}
+.hero h1 em{color:var(--ac);font-style:normal}
+.hero p{color:var(--mut);max-width:560px;margin:.9rem auto 1.8rem;font-size:1rem}
+.hbtns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:.55rem 1.35rem;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;border:none;display:inline-flex;align-items:center;gap:.35rem}
+.btnp{background:var(--ac);color:#000}.btnp:hover{background:#00b8d9;transform:translateY(-1px)}
+.btno{background:transparent;color:var(--ac);border:1.5px solid var(--ac)}.btno:hover{background:rgba(0,212,255,.1)}
+.btnsm{padding:.38rem .9rem;font-size:.77rem}
+.stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+.stat .num{font-size:1.9rem;font-weight:800;color:var(--ac)}
+.stat .label{color:var(--mut);font-size:.76rem}
+section{padding:3.5rem 1.25rem}
+.sl{color:var(--ac);font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.35rem;font-family:var(--mono)}
+h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:.35rem}
+.sub{color:var(--mut);margin-bottom:1.75rem;max-width:560px;font-size:.88rem}
+.con{max-width:1160px;margin:0 auto}
+
+/* CARDS / PATHS */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.1rem}
+.pc{background:var(--sur);border:1px solid var(--bdr);border-radius:13px;overflow:hidden;transition:border-color .2s,transform .15s}
+.pc:hover{border-color:var(--ac);transform:translateY(-2px)}
+.pc.open{border-color:var(--ac)}
+.pc.done{border-color:var(--ac3)}
+.pc.done .pt::after{content:" ✓";color:var(--ac3);font-size:.76rem}
+.ph{padding:1.1rem;display:flex;gap:.8rem;align-items:flex-start;cursor:pointer;user-select:none}
+.pi{font-size:1.5rem;min-width:2rem}
+.pm{flex:1}
+.pb{display:inline-block;padding:.16rem .5rem;border-radius:4px;font-size:.67rem;font-weight:700;margin-bottom:.35rem}
+.pf{background:rgba(16,185,129,.14);color:#34d399}
+.pi2{background:rgba(0,212,255,.11);color:var(--ac)}
+.pa{background:rgba(124,58,237,.15);color:#a78bfa}
+.pe{background:rgba(245,158,11,.12);color:var(--warn)}
+.pt{font-size:.97rem;font-weight:700;margin-bottom:.2rem}
+.pd{color:var(--mut);font-size:.8rem}
+.ptags{display:flex;gap:.3rem;flex-wrap:wrap;padding:0 1.1rem .65rem}
+.tag{background:var(--sur2);border:1px solid var(--bdr);border-radius:4px;padding:.13rem .4rem;font-size:.68rem;color:var(--mut);font-family:var(--mono)}
+.pft{padding:0 1.1rem .8rem;display:flex;align-items:center;justify-content:space-between}
+.ptm{color:var(--mut);font-size:.76rem}
+.arr{color:var(--mut);font-size:.72rem;transition:transform .3s}
+.pc.open .arr{transform:rotate(180deg)}
+.pexp{display:none;border-top:1px solid var(--bdr)}
+.pc.open .pexp{display:block}
+.pexpin{padding:1.1rem;overflow-y:auto;max-height:75vh}
+
+/* DIAGRAMS */
+.dbox{background:var(--code);border:1px solid var(--bdr);border-radius:9px;padding:.9rem;margin:.55rem 0;overflow-x:auto}
+.dlbl{color:var(--ac);font-size:.67rem;font-weight:700;letter-spacing:.1em;margin-bottom:.6rem;font-family:var(--mono)}
+.dbox pre{font-family:var(--mono);font-size:.7rem;color:#a0c4ff;line-height:1.5;white-space:pre}
+[data-theme=light] .dbox pre{color:#1e40af}
+.scn{background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.2);border-radius:9px;padding:.9rem;margin:.55rem 0}
+.scn .slbl{color:var(--ac3);font-size:.67rem;font-weight:700;letter-spacing:.1em;margin-bottom:.45rem}
+.scn p{color:var(--mut);font-size:.8rem}
+
+/* OSI */
+.osiw{display:grid;grid-template-columns:250px 1fr;gap:1.25rem}
+@media(max-width:700px){.osiw{grid-template-columns:1fr}}
+.osis{display:flex;flex-direction:column;gap:.3rem}
+.osil{padding:.6rem .85rem;border-radius:7px;cursor:pointer;transition:all .2s;border:1.5px solid transparent;font-size:.82rem;display:flex;justify-content:space-between;align-items:center;user-select:none}
+.osil:hover,.osil.active{border-color:var(--ac)}
+.l7{background:rgba(239,68,68,.1);color:#fca5a5}.l6{background:rgba(249,115,22,.1);color:#fdba74}
+.l5{background:rgba(234,179,8,.1);color:#fde047}.l4{background:rgba(34,197,94,.1);color:#86efac}
+.l3{background:rgba(59,130,246,.1);color:#93c5fd}.l2{background:rgba(139,92,246,.1);color:#c4b5fd}
+.l1{background:rgba(107,114,128,.14);color:#d1d5db}
+.osid{background:var(--sur);border:1px solid var(--bdr);border-radius:13px;padding:1.35rem;overflow-y:auto;max-height:72vh}
+.osig{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-top:.65rem}
+@media(max-width:460px){.osig{grid-template-columns:1fr}}
+.osic{background:var(--sur2);border-radius:7px;padding:.8rem}
+.osic h4{font-size:.75rem;color:var(--ac);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.08em}
+.osic p,.osic ul{color:var(--mut);font-size:.78rem}.osic ul{padding-left:.85rem}.osic li{margin-bottom:.2rem}
+.pdub{display:inline-block;background:var(--ac2);color:#fff;border-radius:4px;padding:.16rem .5rem;font-size:.7rem;font-weight:700;margin-bottom:.45rem}
+
+/* CONFIGS */
+.ctabs{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:1.1rem}
+.ctab{padding:.4rem 1rem;border-radius:7px;border:1px solid var(--bdr);background:var(--sur);color:var(--mut);font-size:.8rem;cursor:pointer;transition:all .2s}
+.ctab.active{border-color:var(--ac);color:var(--ac);background:rgba(0,212,255,.07)}
+.cp{display:none}.cp.active{display:block}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(390px,1fr));gap:1.1rem}
+@media(max-width:460px){.cgrid{grid-template-columns:1fr}}
+.cc{background:var(--sur);border:1px solid var(--bdr);border-radius:11px;overflow:hidden}
+.cch{padding:.7rem .9rem;background:var(--sur2);display:flex;justify-content:space-between;align-items:center;gap:.4rem}
+.cch h4{font-size:.83rem;font-weight:600;flex:1}
+.cact{display:flex;gap:.35rem}
+.cpbtn{background:transparent;border:1px solid var(--bdr);color:var(--mut);border-radius:6px;padding:.2rem .55rem;font-size:.7rem;cursor:pointer;transition:all .2s}
+.cpbtn:hover{border-color:var(--ac);color:var(--ac)}
+.bmbtn{background:transparent;border:1px solid var(--bdr);color:var(--mut);border-radius:6px;padding:.2rem .5rem;font-size:.72rem;cursor:pointer;transition:all .2s}
+.bmbtn:hover,.bmbtn.saved{border-color:var(--warn);color:var(--warn)}
+.cc pre{padding:.85rem;font-family:var(--mono);font-size:.7rem;color:#a0c4ff;background:var(--code);overflow-x:auto;line-height:1.5}
+[data-theme=light] .cc pre{color:#1e40af}
+.cex{padding:.85rem;border-top:1px solid var(--bdr);color:var(--mut);font-size:.78rem}
+
+/* PROTOCOLS */
+.psrch{width:100%;max-width:360px;background:var(--sur);border:1px solid var(--bdr);border-radius:7px;padding:.55rem .9rem;color:var(--txt);font-size:.85rem;margin-bottom:1.1rem;outline:none}
+.psrch:focus{border-color:var(--ac)}
+.ptbl{width:100%;border-collapse:collapse;font-size:.8rem}
+.ptbl th{text-align:left;padding:.55rem .85rem;background:var(--sur2);color:var(--ac);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--bdr);cursor:pointer;user-select:none;white-space:nowrap}
+.ptbl th:hover{color:var(--txt)}
+.ptbl td{padding:.55rem .85rem;border-bottom:1px solid var(--bdr)}
+.ptbl tr:hover td{background:var(--sur2)}
+.ptbl .port{font-family:var(--mono);color:var(--warn)}
+.lbdg{background:var(--sur2);border:1px solid var(--bdr);border-radius:4px;padding:.08rem .38rem;font-size:.68rem}
+
+/* SUBNET */
+.sform{display:flex;gap:.85rem;flex-wrap:wrap;align-items:flex-end;background:var(--sur);border:1px solid var(--bdr);border-radius:13px;padding:1.1rem;margin-bottom:1.1rem}
+.sform label{display:block;font-size:.75rem;color:var(--mut);margin-bottom:.3rem}
+.sform input,.sform select{background:var(--sur2);border:1px solid var(--bdr);color:var(--txt);border-radius:7px;padding:.48rem .8rem;font-size:.85rem;outline:none;min-width:130px}
+.sform input:focus,.sform select:focus{border-color:var(--ac)}
+.sform .err{border-color:var(--danger)!important}
+.serrmsg{color:var(--danger);font-size:.75rem;margin-top:.25rem;display:none}
+#sres{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:.8rem}
+.src{background:var(--sur);border:1px solid var(--bdr);border-radius:9px;padding:.8rem}
+.rl{color:var(--mut);font-size:.7rem;margin-bottom:.22rem}
+.rv{font-family:var(--mono);font-size:.88rem;color:var(--ac);font-weight:600;word-break:break-all}
+
+/* QUIZ */
+.qw{max-width:700px;margin:0 auto}
+/* controls row */
+.qctrl-row{display:flex;gap:14px;margin-bottom:18px;flex-wrap:wrap;align-items:flex-end}
+.qctrl-grp{display:flex;flex-direction:column;gap:5px;min-width:170px}
+.qctrl-lbl{font-family:var(--mono);font-size:.67rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.qctrl-sel{background:var(--sur);border:1px solid var(--bdr);color:var(--txt);border-radius:6px;padding:7px 11px;font-size:.83rem;cursor:pointer;outline:none;transition:border-color .2s}
+.qctrl-sel:focus,.qctrl-sel:hover{border-color:var(--ac)}
+.qdiff-row{display:flex;gap:5px}
+.qdiff-btn{background:var(--sur);border:1px solid var(--bdr);color:var(--mut);border-radius:6px;padding:7px 10px;font-family:var(--mono);font-size:.72rem;cursor:pointer;transition:all .2s;flex:1}
+.qdiff-btn:hover{border-color:var(--ac);color:var(--ac)}
+.qdiff-btn.active{background:rgba(0,212,255,.07);border-color:var(--ac);color:var(--ac)}
+.qdiff-btn.active[data-diff="intermediate"]{background:rgba(245,158,11,.07);border-color:var(--warn);color:var(--warn)}
+.qdiff-btn.active[data-diff="advanced"]{background:rgba(239,68,68,.07);border-color:var(--danger);color:var(--danger)}
+.qscore-grp{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-left:auto}
+.qschip{background:var(--sur);border:1px solid var(--bdr);border-radius:6px;padding:4px 10px;font-family:var(--mono);font-size:.75rem;color:var(--mut)}
+.qschip b{color:var(--ac)}
+.qschip.pct b{color:var(--ac3)}
+.qschip.streak b{color:var(--warn)}
+/* progress */
+#qprogwrap{background:var(--bdr);border-radius:3px;height:3px;margin-bottom:18px;overflow:hidden;display:none}
+#qprogbar{height:100%;background:var(--ac);border-radius:3px;transition:width .4s;width:0}
+/* card */
+#qcard{background:var(--sur);border:1px solid var(--bdr);border-radius:12px;padding:22px;margin-bottom:14px;min-height:170px}
+#qloading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:36px 0}
+.qspinner{width:26px;height:26px;border:2px solid var(--bdr);border-top-color:var(--ac);border-radius:50%;animation:qspin .8s linear infinite}
+@keyframes qspin{to{transform:rotate(360deg)}}
+.qloadtxt{font-family:var(--mono);font-size:.74rem;color:var(--mut);letter-spacing:.05em}
+#qquestionarea{display:none}
+.qmeta2{display:flex;gap:7px;margin-bottom:13px;flex-wrap:wrap}
+.qbadge{font-family:var(--mono);font-size:.66rem;padding:2px 7px;border-radius:4px;letter-spacing:.04em}
+.qbcat{background:rgba(0,212,255,.08);color:var(--ac);border:1px solid rgba(0,212,255,.25)}
+.qbdiff{background:rgba(16,185,129,.08);color:var(--ac3);border:1px solid rgba(16,185,129,.25)}
+.qbdiff[data-diff="intermediate"]{background:rgba(245,158,11,.08);color:var(--warn);border-color:rgba(245,158,11,.25)}
+.qbdiff[data-diff="advanced"]{background:rgba(239,68,68,.08);color:var(--danger);border-color:rgba(239,68,68,.25)}
+.qq2{font-size:.96rem;font-weight:600;margin-bottom:18px;line-height:1.55;color:var(--txt)}
+.qopts2{display:flex;flex-direction:column;gap:7px}
+.qo2{background:var(--bg);border:1.5px solid var(--bdr);color:var(--mut);border-radius:8px;padding:10px 14px;text-align:left;cursor:pointer;font-size:.84rem;transition:all .15s;line-height:1.4;width:100%}
+.qo2:hover{border-color:var(--ac);color:var(--txt)}
+.qo2.selected{border-color:var(--ac);background:rgba(0,212,255,.06);color:var(--txt)}
+.qo2.correct{border-color:var(--ac3)!important;background:rgba(16,185,129,.09)!important;color:var(--ac3)!important;cursor:default}
+.qo2.wrong{border-color:var(--danger)!important;background:rgba(239,68,68,.09)!important;color:var(--danger)!important;cursor:default}
+.qexp2{margin-top:14px;padding:12px;background:var(--bg);border-left:3px solid var(--ac);border-radius:0 6px 6px 0;font-size:.81rem;color:var(--mut);line-height:1.6;display:none;animation:qfadein .3s ease}
+@keyframes qfadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.qexp2 b{color:var(--ac)}
+#qerr{text-align:center;padding:30px 0;color:var(--danger);font-size:.85rem;display:none}
+#qerr p{margin-bottom:10px}
+/* actions */
+.qacts{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px;display:none}
+.qact-btn{border-radius:7px;padding:9px 18px;font-size:.84rem;font-family:var(--mono);cursor:pointer;border:1px solid transparent;transition:all .2s;letter-spacing:.03em}
+.qact-primary{background:var(--ac);color:#000;font-weight:700;border-color:var(--ac)}
+.qact-primary:hover{background:#00b8d9}
+.qact-primary:disabled{background:var(--sur2);color:var(--mut);cursor:not-allowed;border-color:var(--bdr)}
+.qact-secondary{background:transparent;border-color:var(--bdr);color:var(--mut)}
+.qact-secondary:hover{border-color:var(--ac);color:var(--ac)}
+.qact-reset{background:transparent;border-color:rgba(239,68,68,.3);color:var(--danger);margin-left:auto}
+.qact-reset:hover{background:rgba(239,68,68,.07);border-color:var(--danger)}
+/* history */
+#qhistsec{display:none;margin-top:4px}
+.qhisttog{background:none;border:none;color:var(--mut);font-family:var(--mono);font-size:.7rem;cursor:pointer;letter-spacing:.05em;padding:3px 0;text-transform:uppercase}
+.qhisttog:hover{color:var(--txt)}
+#qhistlist{margin-top:7px;display:flex;flex-direction:column;gap:4px;display:none}
+.qhistitem{display:flex;align-items:flex-start;gap:7px;padding:5px 9px;background:var(--sur);border-radius:5px;font-size:.76rem;color:var(--mut)}
+.qdot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.qdot-ok{background:var(--ac3)}
+.qdot-no{background:var(--danger)}
+/* CHEAT */
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.1rem}
+.chc{background:var(--sur);border:1px solid var(--bdr);border-radius:11px;overflow:hidden}
+.chh{padding:.65rem .9rem;background:var(--sur2);font-size:.78rem;font-weight:700;color:var(--ac);border-bottom:1px solid var(--bdr)}
+.chc table{width:100%;border-collapse:collapse}
+.chc td{padding:.35rem .85rem;font-size:.78rem;border-bottom:1px solid var(--bdr)}
+.chc tr:last-child td{border-bottom:none}
+.chc td:first-child{font-family:var(--mono);color:var(--warn)}
+.chc td:last-child{color:var(--mut)}
+
+/* PROGRESS */
+.pbw{background:var(--sur2);border-radius:4px;height:4px;overflow:hidden;margin-top:.4rem;max-width:180px;display:inline-block;vertical-align:middle;margin-left:.5rem}
+.pbf{height:100%;background:var(--ac3);border-radius:4px;transition:width .4s}
+
+@media(max-width:740px){.nl{display:none}.hbg{display:flex}}
+@media(max-width:480px){.pgrid,.cgrid{grid-template-columns:1fr}.stats{gap:1.25rem}section{padding:2.5rem .85rem}}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+  <a class="brand" href="#" style="display:flex;align-items:center;gap:.5rem">
+  <img src="data:image/png;base64,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" alt="NetCore" style="width:28px;height:28px;border-radius:6px;flex-shrink:0"/>
+  <span>NetCore</span>
+</a>
+  <div class="nl" id="nl">
+    <a href="#paths">Paths</a><a href="#osi">OSI</a><a href="#configs">Configs</a>
+    <a href="#protocols">Protocols</a><a href="#subnet">Subnet</a><a href="#quiz">Quiz</a><a href="#cheat">Cheat Sheet</a>
+  </div>
+  <div class="nav-act">
+    <button class="ib" onclick="openS()" title="Search (/)">🔍</button>
+    <button class="ib" onclick="toggleBM()" title="Bookmarks">🔖</button>
+    <button class="ib" id="thbtn" onclick="toggleTheme()" title="Theme">🌙</button>
+    <button class="hbg" id="hbg" onclick="toggleMM()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mmenu" id="mmenu">
+  <a href="#paths" onclick="closeMM()">📚 Learning Paths</a>
+  <a href="#osi" onclick="closeMM()">🔲 OSI Model</a>
+  <a href="#configs" onclick="closeMM()">⌨️ Config Lab</a>
+  <a href="#protocols" onclick="closeMM()">📡 Protocols</a>
+  <a href="#subnet" onclick="closeMM()">🔢 Subnet Calc</a>
+  <a href="#quiz" onclick="closeMM()">✅ Quiz</a>
+  <a href="#cheat" onclick="closeMM()">📋 Cheat Sheet</a>
+</div>
+<div id="rprog"></div>
+
+<!-- SEARCH -->
+<div class="sov" id="sov" onclick="closeSOuter(event)">
+  <div class="sbox">
+    <div class="sinp">
+      <span>🔍</span>
+      <input id="sinput" placeholder="Search topics, protocols, configs…" oninput="doSearch(this.value)" autocomplete="off"/>
+      <kbd onclick="closeS()" style="background:var(--sur2);border:1px solid var(--bdr);border-radius:5px;padding:.1rem .4rem;font-size:.7rem;color:var(--mut);cursor:pointer">ESC</kbd>
+    </div>
+    <div id="sres"></div>
+  </div>
+</div>
+
+<!-- BOOKMARKS -->
+<div id="bmpanel">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.9rem">
+    <strong>🔖 Bookmarks</strong>
+    <button class="ib" onclick="toggleBM()">✕</button>
+  </div>
+  <div id="bmlist"></div>
+</div>
+
+<!-- TOAST + BTT -->
+<div class="tc" id="tc"></div>
+<button id="btt" onclick="scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="sl">// live networking reference</p>
+  <h1>Master Networking<br>from <em>Packets to Cloud</em></h1>
+  <p>Interactive OSI explorer, deep-dive paths with process diagrams, subnet calculator, protocol reference, config lab &amp; adaptive quiz.</p>
+  <div class="hbtns">
+    <a href="#paths" class="btn btnp">▶ Start Learning</a>
+    <a href="#subnet" class="btn btno">⊕ Subnet Calc</a>
+    <button class="btn btno" onclick="openS()">🔍 Search</button>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="num">7</div><div class="label">OSI Layers</div></div>
+    <div class="stat"><div class="num">70+</div><div class="label">Protocols</div></div>
+    <div class="stat"><div class="num">16</div><div class="label">Configs</div></div>
+    <div class="stat"><div class="num" id="qcount">∞</div><div class="label">Quiz Questions</div></div>
+  </div>
+</div>
+
+<!-- PATHS -->
+<section id="paths"><div class="con">
+  <div class="sl">// learning_paths</div>
+  <h2>Learning Paths</h2>
+  <p class="sub">Click any path to expand topics, process flow diagrams, and real-world scenarios.</p>
+  <div id="psum" style="color:var(--mut);font-size:.78rem;margin-bottom:.9rem"></div>
+  <div class="pgrid" id="pgrid"></div>
+</div></section>
+
+<!-- OSI -->
+<section id="osi"><div class="con">
+  <div class="sl">// osi_model</div>
+  <h2>The OSI Model</h2>
+  <p class="sub">Click any layer for protocols, diagrams, and real-world examples.</p>
+  <div class="osiw">
+    <div>
+      <div class="osis" id="osis"></div>
+      <div class="dbox" style="margin-top:.9rem">
+        <div class="dlbl">ENCAPSULATION FLOW</div>
+        <pre>SENDER (App→Wire)    RECEIVER (Wire→App)
+[L7] App Data              App Data ▲
+[L6] TLS/Encoding          Decrypt  │
+[L5] Session Hdr      Strip Session │
+[L4] TCP Segment        TCP Segment │
+[L3] IP Packet            IP Packet │
+[L2] Ethernet Frame  Ethernet Frame │
+[L1] Bits ────────── wire/air ──────┘
+↓ Each layer adds a header going down
+↑ Each layer strips a header going up</pre>
+      </div>
+    </div>
+    <div class="osid" id="osid"><p style="color:var(--mut)">← Select a layer to explore its details.</p></div>
+  </div>
+</div></section>
+
+<!-- CONFIGS -->
+<section id="configs"><div class="con">
+  <div class="sl">// config_lab</div>
+  <h2>Configuration Lab</h2>
+  <p class="sub">Real CLI configs with explanations. Copy or bookmark any config for later.</p>
+  <div class="ctabs">
+    <button class="ctab active" onclick="swTab('routing',this)">Routing</button>
+    <button class="ctab" onclick="swTab('switching',this)">Switching</button>
+    <button class="ctab" onclick="swTab('security',this)">Security</button>
+    <button class="ctab" onclick="swTab('linux',this)">Linux/IP</button>
+  </div>
+  <div id="cp-routing" class="cp active"></div>
+  <div id="cp-switching" class="cp"></div>
+  <div id="cp-security" class="cp"></div>
+  <div id="cp-linux" class="cp"></div>
+</div></section>
+
+<!-- PROTOCOLS -->
+<section id="protocols"><div class="con">
+  <div class="sl">// protocol_reference</div>
+  <h2>Protocol Reference</h2>
+  <p class="sub">70+ protocols. Search or click column headers to sort.</p>
+  <input class="psrch" id="psrch" placeholder="⌕  Search protocol, port, layer…" oninput="filterP()"/>
+  <div style="overflow-x:auto">
+    <table class="ptbl">
+      <thead><tr>
+        <th onclick="sortP(0)">Protocol <span id="sa0">↑</span></th>
+        <th onclick="sortP(1)">Port <span id="sa1">↕</span></th>
+        <th onclick="sortP(2)">Layer <span id="sa2">↕</span></th>
+        <th onclick="sortP(3)">Transport <span id="sa3">↕</span></th>
+        <th>Description</th>
+      </tr></thead>
+      <tbody id="ptbody"></tbody>
+    </table>
+  </div>
+</div></section>
+
+<!-- SUBNET -->
+<section id="subnet"><div class="con">
+  <div class="sl">// subnet_calculator</div>
+  <h2>Subnet Calculator</h2>
+  <p class="sub">Enter any IPv4 address and CIDR prefix for instant results.</p>
+  <div class="sform">
+    <div>
+      <label>IP Address</label>
+      <input id="ipinp" value="192.168.1.0" oninput="valIP(this)"/>
+      <div class="serrmsg" id="iperr">Enter a valid IPv4 (e.g. 10.0.0.0)</div>
+    </div>
+    <div>
+      <label>CIDR Prefix</label>
+      <select id="cidrinp">
+        <option value="8">/8 — 16M hosts</option><option value="16">/16 — 65K hosts</option>
+        <option value="22">/22 — 1022 hosts</option><option value="23">/23 — 510 hosts</option>
+        <option value="24" selected>/24 — 254 hosts</option><option value="25">/25 — 126 hosts</option>
+        <option value="26">/26 — 62 hosts</option><option value="27">/27 — 30 hosts</option>
+        <option value="28">/28 — 14 hosts</option><option value="29">/29 — 6 hosts</option>
+        <option value="30">/30 — 2 hosts</option><option value="31">/31 — P-t-P</option>
+        <option value="32">/32 — Host route</option>
+      </select>
+    </div>
+    <button class="btn btnp" onclick="calcS()">⊕ Calculate</button>
+  </div>
+  <div id="sres"></div>
+  <div class="dbox" style="margin-top:1.25rem">
+    <div class="dlbl">VLSM ENTERPRISE EXAMPLE</div>
+    <pre>10.10.0.0/16 — Variable Length Subnet Masking
+┌──────────────────────────────────────────────┐
+│ 10.10.1.0/24  Engineering  — 254 hosts       │
+│ 10.10.2.0/24  Sales        — 254 hosts       │
+│ 10.10.3.0/27  Management   —  30 hosts       │
+│ 10.10.4.0/30  WAN Link 1   —   2 hosts       │
+│ 10.10.4.4/30  WAN Link 2   —   2 hosts       │
+│ 10.10.4.8/30  WAN Link 3   —   2 hosts       │
+└──────────────────────────────────────────────┘
+VLSM = assign only the address space you need!</pre>
+  </div>
+</div></section>
+
+<!-- QUIZ -->
+<section id="quiz"><div class="con">
+  <div class="sl">// knowledge_check</div>
+  <h2>Quiz</h2>
+  <p class="sub">AI-generated questions — infinite & never the same twice. Pick a category and difficulty.</p>
+  <div class="qw">
+
+    <!-- Controls -->
+    <div class="qctrl-row">
+      <div class="qctrl-grp">
+        <span class="qctrl-lbl">Category</span>
+        <select id="qz-category" class="qctrl-sel">
+          <option>OSI Model</option>
+          <option>TCP/IP &amp; Protocols</option>
+          <option>Subnetting &amp; CIDR</option>
+          <option>Routing &amp; Switching</option>
+          <option>Network Security</option>
+          <option>DNS &amp; DHCP</option>
+          <option>Wireless Networking</option>
+          <option>Cloud Networking</option>
+        </select>
+      </div>
+      <div class="qctrl-grp">
+        <span class="qctrl-lbl">Difficulty</span>
+        <div class="qdiff-row">
+          <button class="qdiff-btn active" data-diff="beginner">Beginner</button>
+          <button class="qdiff-btn" data-diff="intermediate">Intermediate</button>
+          <button class="qdiff-btn" data-diff="advanced">Advanced</button>
+        </div>
+      </div>
+      <div class="qscore-grp">
+        <span class="qschip">Score: <b id="qz-score">0/0</b></span>
+        <span class="qschip pct">Accuracy: <b id="qz-pct">&mdash;</b></span>
+        <span class="qschip streak" id="qz-streak-chip" style="display:none">🔥 Streak: <b id="qz-streak">0</b></span>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div id="qprogwrap"><div id="qprogbar"></div></div>
+
+    <!-- Card -->
+    <div id="qcard">
+      <div id="qloading">
+        <div class="qspinner"></div>
+        <span class="qloadtxt">// generating question...</span>
+      </div>
+      <div id="qquestionarea">
+        <div class="qmeta2">
+          <span class="qbadge qbcat" id="qz-badge-cat"></span>
+          <span class="qbadge qbdiff" id="qz-badge-diff"></span>
+        </div>
+        <p class="qq2" id="qz-question-text"></p>
+        <div class="qopts2" id="qz-options"></div>
+        <div class="qexp2" id="qz-explanation"></div>
+      </div>
+      <div id="qerr">
+        <p id="qz-error-msg"></p>
+        <button class="qact-btn qact-secondary" id="qz-retry-btn">Try again</button>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="qacts" id="qz-actions">
+      <button class="qact-btn qact-primary" id="qz-check-btn" disabled>Check Answer</button>
+      <button class="qact-btn qact-secondary" id="qz-skip-btn">Skip</button>
+      <button class="qact-btn qact-reset" id="qz-reset-btn">↺ Reset</button>
+    </div>
+
+    <!-- History -->
+    <div id="qhistsec">
+      <button class="qhisttog" id="qz-hist-toggle">&#9657; Recent answers (0)</button>
+      <div id="qhistlist"></div>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- CHEAT SHEET -->
+<section id="cheat"><div class="con">
+  <div class="sl">// cheat_sheet</div>
+  <h2>Quick Reference</h2>
+  <p class="sub">Critical values and tables for the field and certifications.</p>
+  <div class="chgrid" id="chgrid"></div>
+</div></section>
+
+<footer style="text-align:center;padding:1.75rem;border-top:1px solid var(--bdr);color:var(--mut);font-size:.78rem">
+  <strong style="color:var(--txt)">NetCore</strong> — From packets to cloud &nbsp;|&nbsp; Built for network engineers everywhere
+</footer>
+<script>
+// ── UTILS ────────────────────────────────────────────
+const idx=[];
+function addIdx(t,c,s,h){idx.push({t,c,s,h})}
+function toast(msg,type='info',ic='ℹ️'){
+  const d=document.getElementById('tc'),el=document.createElement('div');
+  el.className=`toast ${type}`;el.innerHTML=`<span>${ic}</span><span>${msg}</span>`;
+  d.appendChild(el);requestAnimationFrame(()=>el.classList.add('show'));
+  setTimeout(()=>{el.classList.remove('show');setTimeout(()=>el.remove(),350)},2400);
+}
+// Theme
+let dark=true;
+function toggleTheme(){
+  dark=!dark;document.body.setAttribute('data-theme',dark?'':'light');
+  document.getElementById('thbtn').textContent=dark?'🌙':'☀️';
+  toast(dark?'Dark mode':'Light mode','info',dark?'🌙':'☀️');
+}
+// Mobile menu
+function toggleMM(){document.getElementById('mmenu').classList.toggle('open');document.getElementById('hbg').classList.toggle('open')}
+function closeMM(){document.getElementById('mmenu').classList.remove('open');document.getElementById('hbg').classList.remove('open')}
+// Scroll
+window.addEventListener('scroll',()=>{
+  const p=window.scrollY/(document.body.scrollHeight-innerHeight)*100;
+  document.getElementById('rprog').style.width=p+'%';
+  document.getElementById('btt').classList.toggle('vis',scrollY>400);
+  ['paths','osi','configs','protocols','subnet','quiz','cheat'].forEach(id=>{
+    const el=document.getElementById(id);if(!el)return;
+    const r=el.getBoundingClientRect();
+    document.querySelectorAll(`#nl a[href="#${id}"],#mmenu a[href="#${id}"]`).forEach(l=>l.classList.toggle('active',r.top<=70&&r.bottom>70));
+  });
+});
+// Search
+function openS(){document.getElementById('sov').classList.add('open');setTimeout(()=>document.getElementById('sinput').focus(),50)}
+function closeS(){document.getElementById('sov').classList.remove('open');document.getElementById('sinput').value='';document.getElementById('sres').innerHTML=''}
+function closeSOuter(e){if(e.target===document.getElementById('sov'))closeS()}
+document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement.tagName!=='INPUT'){e.preventDefault();openS()}if(e.key==='Escape')closeS()});
+function doSearch(q){
+  const r=document.getElementById('sres');
+  if(!q.trim()){r.innerHTML='';return}
+  const h=idx.filter(i=>i.t.toLowerCase().includes(q.toLowerCase())||i.s.toLowerCase().includes(q.toLowerCase())||i.c.toLowerCase().includes(q.toLowerCase())).slice(0,10);
+  if(!h.length){r.innerHTML=`<div class="sempty">No results for "<strong>${q}</strong>"</div>`;return}
+  r.innerHTML=h.map(i=>`<div class="sri" onclick="goTo('${i.h}')"><div class="rc">${i.c}</div><div class="rt">${i.t}</div><div class="rs">${i.s.slice(0,90)}…</div></div>`).join('');
+}
+function goTo(h){closeS();const el=document.querySelector(h)||document.getElementById(h.replace('#',''));if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
+// Bookmarks
+let bms=JSON.parse(localStorage.getItem('nc_bm')||'[]');
+function saveBMs(){localStorage.setItem('nc_bm',JSON.stringify(bms))}
+function toggleBM(){document.getElementById('bmpanel').classList.toggle('open');renderBMs()}
+function addBM(t,c){
+  if(bms.find(b=>b.t===t)){bms=bms.filter(b=>b.t!==t);saveBMs();renderBMs();toast('Bookmark removed','info','🔖');return false}
+  bms.push({t,c});saveBMs();renderBMs();toast('Bookmarked!','success','🔖');return true;
+}
+function renderBMs(){
+  const el=document.getElementById('bmlist');
+  if(!bms.length){el.innerHTML='<div class="bmempty">No bookmarks yet.<br>Click 🔖 on any config.</div>';return}
+  el.innerHTML=bms.map((b,i)=>`<div class="bmi"><div><div class="bmc">${b.c}</div><div class="bmt">${b.t}</div></div><button class="bmr" onclick="rmBM(${i})">✕</button></div>`).join('');
+}
+function rmBM(i){bms.splice(i,1);saveBMs();renderBMs();toast('Removed','info','🔖')}
+// Progress
+let done=JSON.parse(localStorage.getItem('nc_done')||'[]');
+function saveDone(){localStorage.setItem('nc_done',JSON.stringify(done))}
+function markDone(t,card){
+  if(done.includes(t)){done=done.filter(c=>c!==t);card.classList.remove('done');toast('Marked incomplete','info','○')}
+  else{done.push(t);card.classList.add('done');toast('Path complete!','success','✓')}
+  saveDone();updPsum();
+}
+function updPsum(){
+  const el=document.getElementById('psum'),n=done.length,tot=paths.length;
+  el.innerHTML=n>0?`Progress: ${n}/${tot} paths <div class="pbw"><div class="pbf" style="width:${n/tot*100}%"></div></div>`:'';
+}
+
+// ── PATHS DATA ───────────────────────────────────────
+const paths=[
+  {icon:"🌐",badge:"pf",bl:"Fundamentals",title:"Network Foundations",desc:"OSI model, TCP/IP, binary/hex, topologies and how data travels.",tags:["OSI","TCP/IP","Binary","Topologies"],time:"~4 hrs",
+   topics:[
+    {title:"OSI Model — 7 Layers",detail:"Each layer has a role, PDU name, and protocol set. Master this for troubleshooting and certifications.",
+     diag:`LAYER  NAME          PDU      PROTOCOLS
+─────────────────────────────────────────────
+  7    Application   Data     HTTP,FTP,DNS,SMTP,SSH
+  6    Presentation  Data     TLS,JPEG,ASCII,gzip
+  5    Session       Data     NetBIOS,RPC,SIP
+  4    Transport     Segment  TCP, UDP, QUIC
+  3    Network       Packet   IP,ICMP,OSPF,BGP
+  2    Data Link     Frame    Ethernet,802.11,STP
+  1    Physical      Bits     Cables,Fibre,Radio
+Troubleshoot bottom-up: L1(cable?) → L3(ping?) → L7`,
+     scn:"Browser loads a page: DNS (L7) → TLS (L6) → TCP handshake (L4) → IP routing (L3) → MAC switching (L2) → bits on wire (L1). A router only processes up to L3 and re-wraps; a switch works at L2 only."},
+    {title:"Network Topologies",detail:"Physical and logical layout affects cost, fault tolerance, and scalability.",
+     diag:`BUS       STAR           RING        MESH
+A─B─C─D   A  B  C          A─B       A─B─C
+          └──┼──┘          │   │     │╲ │╲│
+            SW             D─C       D─E─F
+           (common)       (legacy)  (DC/WAN)
+
+ENTERPRISE 3-TIER HIERARCHY:
+  ┌──────────────┐  Core    — high-speed backbone
+  └──┬────────┬──┘
+  ┌──┴──┐  ┌──┴──┐  Distribution — policy/ACL
+  └──┬──┘  └──┬──┘
+ Access    Access     — end users, VLANs, PortFast`,
+     scn:"A hospital uses 3-tier: Core at 40Gbps, Distribution enforces VLANs (Medical/Admin/Guest), Access switches connect devices. A failed access switch affects only that wing's 48 ports — not the whole hospital."}
+   ]},
+  {icon:"📐",badge:"pi2",bl:"Intermediate",title:"IP Addressing & Subnetting",desc:"IPv4/IPv6, CIDR, VLSM, NAT/PAT, and real address planning.",tags:["IPv4","IPv6","CIDR","NAT"],time:"~6 hrs",
+   topics:[
+    {title:"CIDR Subnetting",detail:"Classless addressing. Master the block-size shortcut for rapid subnetting.",
+     diag:`/Prefix  Mask                 Hosts   Block
+/24      255.255.255.0        254     256
+/25      255.255.255.128      126     128
+/26      255.255.255.192       62      64
+/27      255.255.255.224       30      32
+/28      255.255.255.240       14      16
+/29      255.255.255.248        6       8
+/30      255.255.255.252        2       4
+SHORTCUT: Block = 256 − last octet of mask
+  /26 → .192 → block=64 → .0,.64,.128,.192
+FORMULA: Usable = 2^(32−prefix) − 2`,
+     scn:"Need 5 subnets with 25 hosts each: use /27 (30 usable). From 192.168.10.0/24: .0/27, .32/27, .64/27, .96/27, .128/27. Each has hosts .1–.30 with .0 network and .31 broadcast."},
+    {title:"NAT & PAT",detail:"Port Address Translation allows many private hosts to share one public IP.",
+     diag:`PAT (MANY-TO-ONE) — most common
+  192.168.1.10:4500 ─┐
+  192.168.1.11:4501 ─┼─► 203.0.113.1:1024→1026 ─► Internet
+  192.168.1.12:4502 ─┘
+NAT TABLE:
+  Inside Local         Inside Global
+  192.168.1.10:4500    203.0.113.1:1024
+  192.168.1.11:4501    203.0.113.1:1025
+Return: dest port 1024 → maps back to .10:4500
+NAT TYPES: Full Cone/Restricted/Port-Restricted/Symmetric`,
+     scn:"500 employees share 5 public IPs via PAT. VoIP breaks with Symmetric NAT — use STUN/TURN or SIP ALG. IPv6 eliminates NAT entirely with global unicast addresses for every device."}
+   ]},
+  {icon:"🔀",badge:"pi2",bl:"Intermediate",title:"Routing & Switching",desc:"OSPF, BGP, VLANs, STP, EtherChannel, and L3 switching.",tags:["OSPF","BGP","VLANs","STP"],time:"~10 hrs",
+   topics:[
+    {title:"OSPF Multi-Area",detail:"Link-state IGP using Dijkstra SPF. Areas reduce LSA flooding; ABRs summarise routes.",
+     diag:`            Area 0 (Backbone)
+    ┌──────────────────────────────────┐
+    │   R1 ──────── R2 ──────── R3    │
+    └───┼───────────┼───────────┼─────┘
+        │           │           │
+     Area 1      Area 2      Area 3
+     10.1.x.x   10.2.x.x   10.3.x.x
+     (ABR=R1)   (ABR=R2)   (ABR=R3)
+ROUTER TYPES: IR(internal) ABR(border) ASBR(external)
+STATES: Down→Init→2-Way→ExStart→Exchange→Loading→Full
+METRIC: Cost = ref-bw / interface-bw (default ref=100M)`,
+     scn:"ABR summarises Area 1 routes: 'area 1 range 10.1.0.0 255.255.0.0' → one LSA instead of 254. OSPF converges in ~1s with RSTP+BFD. MD5/SHA auth prevents rogue routers forming adjacencies."},
+    {title:"VLANs & 802.1Q Trunking",detail:"VLANs create logical segments on shared hardware. 802.1Q inserts a 4-byte tag carrying the VLAN ID.",
+     diag:`ACCESS PORT (one VLAN):
+  PC ──[VLAN 10 untagged]──► Switch port
+
+TRUNK PORT (multiple VLANs):
+  Switch ──[VLAN 10 tagged | VLAN 20 tagged]──► Switch
+  Native VLAN = untagged traffic (not VLAN 1!)
+
+802.1Q FRAME TAG (4 bytes after src MAC):
+┌──────┬──────────┬──────┐
+│0x8100│PCP│DEI│VID│Payload│
+│ TPID │ 3b│ 1b│12b│       │
+└──────┴──────────┴──────┘
+VID: 0-4095 (4094 usable), VLAN 1 = default
+
+VLAN PRUNING: only allowed VLANs cross trunk
+  switchport trunk allowed vlan 10,20,30`,
+     scn:"VoIP on VLAN 20: switch marks frames with PCP=5 (voice priority). Distribution enforces QoS — voice packets hit priority queue, never dropped during congestion. Data on VLAN 10 may drop; calls continue."}
+   ]},
+  {icon:"🔒",badge:"pa",bl:"Advanced",title:"Network Security",desc:"Firewalls, ACLs, IPSec VPN, IDS/IPS, and Zero Trust architecture.",tags:["Firewalls","IPSec","ACL","ZeroTrust"],time:"~12 hrs",
+   topics:[
+    {title:"DMZ Architecture",detail:"Screened subnet isolates public-facing servers. Two firewalls create defence-in-depth.",
+     diag:`Internet
+    │
+┌───┴───┐ Outer FW: allow 80/443 inbound to DMZ
+│  FW1  │
+└───┬───┘
+    │
+┌───┴────────────────────────────┐
+│  DMZ:  WebSvr  MailSvr  DNS   │
+│        10.0.5.x                │
+└───┬────────────────────────────┘
+┌───┴───┐ Inner FW: DMZ→App:8080 only
+│  FW2  │ No direct Internet→Internal
+└───┬───┘
+    │
+┌───┴────────────────────────────┐
+│  Internal: AppSvrs  Databases  │
+│  10.0.10.x         10.0.20.x  │
+└────────────────────────────────┘`,
+     scn:"Attacker exploits web server in DMZ. Inner FW blocks pivot to internal hosts. Attacker is contained — they can't reach the app servers or databases. IDS on both firewalls alerts within seconds. This is defence-in-depth."},
+    {title:"Zero Trust Architecture",detail:"Never trust, always verify. Every request authenticated regardless of network location.",
+     diag:`TRADITIONAL (Castle & Moat):
+Internet ──[Firewall]──│ Internal (trusted) ← Problem!
+
+ZERO TRUST:
+User/Device ──► PEP ──► Resource
+               │
+  ┌────────────┴──────────────────────┐
+  │    POLICY ENGINE (PDP)            │
+  │ ● MFA passed?   ● Device patched? │
+  │ ● Geo-normal?   ● Working hours?  │
+  │ ● Least-privilege per app         │
+  └───────────────────────────────────┘
+  → Continuous re-evaluation (not just login)
+  → Micro-segmentation: App A ≠ App B
+  → All traffic encrypted (even east-west)`,
+     scn:"Remote dev logs in from new country at 3am. ZTA: MFA passes but geo-anomaly triggers hardware key. Device AV is 3 days old — access restricted to read-only. Even valid credentials alone cannot reach production."}
+   ]},
+  {icon:"☁️",badge:"pa",bl:"Advanced",title:"Cloud Networking",desc:"AWS VPC, hybrid connectivity, SD-WAN, and overlay networks.",tags:["VPC","SD-WAN","VXLAN","DirectConnect"],time:"~14 hrs",
+   topics:[
+    {title:"AWS VPC Architecture",detail:"Isolated virtual network with public/private/database subnet tiers across AZs.",
+     diag:`VPC: 10.0.0.0/16
+┌─────────────────────────────────────────┐
+│  Internet Gateway (IGW)                 │
+│  PUBLIC (AZ-a)         PUBLIC (AZ-b)    │
+│  10.0.1.0/24  ALB      10.0.2.0/24 ALB  │
+│  NAT-GW                NAT-GW           │
+│  PRIVATE APP           PRIVATE APP      │
+│  10.0.10.0/24          10.0.11.0/24     │
+│  RT: 0/0 → NAT-GW      RT: 0/0 → NAT-GW│
+│  DB SUBNET (no internet route)          │
+│  10.0.20.0/24 RDS  10.0.21.0/24 RDS    │
+│  ┌──────────────────────────────────┐   │
+│  │ VGW ← VPN/Direct Connect to DC  │   │
+│  └──────────────────────────────────┘   │
+└─────────────────────────────────────────┘
+SG = stateful per-instance | NACL = stateless per-subnet`,
+     scn:"ALB in public subnets distributes HTTPS to app servers. App servers egress via NAT GW (no public IP). RDS security group only allows port 5432 from the app server SG. Direct Connect provides 10Gbps private link to on-premises DC."},
+    {title:"VXLAN Overlay",detail:"Encapsulates L2 frames in UDP/4789. 24-bit VNI = 16M segments vs 4096 VLANs.",
+     diag:`VXLAN PACKET:
+┌──────────┬──────┬──────┬────────┬────────┐
+│Outer ETH │Outer │ UDP  │VXLAN   │Inner   │
+│HostA→HostB│IP A→B│4789  │VNI=5001│L2 Frame│
+└──────────┴──────┴──────┴────────┴────────┘
+VTEP = VXLAN Tunnel End Point (encap/decap)
+EVPN control plane (BGP) eliminates flooding:
+  VM boots → Leaf advertises Type-2 BGP route
+  All other leaves learn MAC/IP via BGP
+  → Zero ARP floods across the fabric`,
+     scn:"Cloud provider: 10K tenants on shared hardware. Each tenant gets isolated VNI segments. EVPN Type-2 routes distribute MAC/IP to all leaves via BGP — no flooding. VM live-migration triggers Type-1 route, all leaves update in <100ms."}
+   ]},
+  {icon:"⚡",badge:"pe",bl:"Expert",title:"Data Centre & HPC Networking",desc:"Spine-leaf, EVPN, 400GbE, RDMA for hyperscale environments.",tags:["Spine-Leaf","EVPN","400GbE","RDMA"],time:"~18 hrs",
+   topics:[
+    {title:"Spine-Leaf Topology",detail:"Every leaf connects to every spine — constant 2-hop latency, ECMP, linear scale-out.",
+     diag:`     Spine-1  Spine-2  Spine-3  Spine-4
+       │╲│╲│   │╲│╲│   │╲│╲│   │╲│╲│
+  Leaf-1─┘ └───┘ └───┘ └───┘ └──┘ └──┐
+  Leaf-2 (each leaf connects to ALL spines)
+  ...
+  Leaf-N
+    │
+  Servers (32×25GbE down | 4×100GbE up per leaf)
+PROPERTIES:
+✓ Any server-to-server = exactly 2 hops
+✓ ECMP: 4×100G = 400G bisectional BW per leaf
+✓ Add leaf = more servers (scale-out)
+✓ Add spine = more bandwidth (scale-up)
+✓ No spanning tree — pure L3 BGP/OSPF underlay`,
+     scn:"Adding 1000 servers: plug in new leaf, connect to all 4 spines. BGP auto-discovers adjacencies. No STP changes, no VLAN config on spines. ECMP distributes traffic across all spine uplinks simultaneously. East-west latency is constant ~2μs regardless of rack position."},
+    {title:"RDMA & High-Performance NIC",detail:"Kernel-bypass networking: NIC reads/writes memory directly. Latency drops from 100μs to 1μs.",
+     diag:`TRADITIONAL TCP/IP:
+App → OS Kernel → NIC Driver → Wire → NIC → Kernel → App
+Latency: 50-200μs | CPU: 100% core at 10GbE
+
+RDMA (RoCE v2 or InfiniBand):
+App → RDMA NIC ──────── Wire ────── RDMA NIC → Mem
+      (kernel bypass)               (zero CPU copy)
+Latency: 1-3μs | CPU: <5% overhead
+
+RDMA TYPES:
+InfiniBand  Native, ~1μs, lossless fabric
+RoCE v2     RDMA over UDP (routable)
+iWARP       RDMA over TCP (firewall-friendly)
+LOSSLESS: PFC (pause frames) + ECN (mark not drop)`,
+     scn:"GPT-4 training: 10K+ GPUs connected via 400Gb/s InfiniBand. AllReduce (gradient sync) transfers terabytes between all GPUs every few seconds. RDMA: each GPU NIC directly reads another GPU's memory — no CPU interrupt, no kernel copy. 1μs vs 100μs TCP = days vs weeks of training time."}
+   ]}
+];
+
+// Render paths
+function renderPaths(){
+  const g=document.getElementById('pgrid');
+  paths.forEach((p,i)=>{
+    const c=document.createElement('div');
+    c.className='pc'+(done.includes(p.title)?' done':'');
+    c.innerHTML=`
+      <div class="ph" onclick="toggleP(${i})">
+        <div class="pi">${p.icon}</div>
+        <div class="pm">
+          <span class="pb ${p.badge}">${p.bl}</span>
+          <div class="pt">${p.title}</div>
+          <div class="pd">${p.desc}</div>
+        </div>
+        <span class="arr">▼</span>
+      </div>
+      <div class="ptags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <div class="pft">
+        <span class="ptm">⏱ ${p.time}</span>
+        <button class="btn btnsm btno" onclick="event.stopPropagation();markDone('${p.title}',this.closest('.pc'))">${done.includes(p.title)?'✓ Done':'○ Mark done'}</button>
+      </div>
+      <div class="pexp"><div class="pexpin">${p.topics.map(t=>`
+        <div style="margin-bottom:1.25rem">
+          <div style="font-weight:700;font-size:.9rem;color:var(--ac);margin-bottom:.25rem">${t.title}</div>
+          <div style="color:var(--mut);font-size:.8rem;margin-bottom:.5rem">${t.detail}</div>
+          <div class="dbox"><div class="dlbl">PROCESS DIAGRAM</div><pre>${t.diag}</pre></div>
+          <div class="scn"><div class="slbl">▶ REAL-WORLD SCENARIO</div><p>${t.scn}</p></div>
+        </div>`).join('')}
+      </div></div>`;
+    g.appendChild(c);
+    addIdx(p.title,'Learning Path',p.desc,'#paths');
+    p.topics.forEach(t=>addIdx(t.title,`Path: ${p.title}`,t.detail,'#paths'));
+  });
+  updPsum();
+}
+renderPaths();
+function toggleP(i){document.querySelectorAll('.pc')[i].classList.toggle('open')}
+
+// ── OSI ──────────────────────────────────────────────
+const osiData=[
+  {n:7,name:"Application",cl:"l7",pdu:"Data (no OSI header added)",
+   desc:"The topmost layer provides network services directly to end-user applications. It ensures communication partners (e.g. web browsers and servers) can exchange data. This layer handles application protocols and interfaces — it does NOT add its own header; application-specific headers (e.g. HTTP headers) become payload for lower layers. It is the only layer with no higher OSI boundary.",
+   protos:["HTTP / HTTPS","FTP / SFTP","SMTP / IMAP / POP3","DNS","DHCP","SNMP","SSH / Telnet","NTP","LDAP","SIP"],
+   fns:["Provides user-facing network services","Resource sharing and remote file access","Application service advertisements","Protocol interfaces for specific app types","Network virtual terminal support"],
+   devs:"Web servers · Mail servers · DNS servers · Application proxies · L7 load balancers · WAFs",
+   pduFields:"No OSI PDU header. Application data (e.g. HTTP request body + HTTP headers) is passed as-is to Layer 6. Application-layer headers are part of the payload, not added by the OSI layer itself.",
+   diag:`HTTP REQUEST-RESPONSE (Application Layer)
+──────────────────────────────────────────────
+  Browser                         Web Server
+    │──DNS query: google.com? ──────────► DNS
+    │◄─ Reply: 142.250.x.x ─────────────
+    │──TCP SYN ──────────────────────────►│
+    │◄─SYN-ACK ──────────────────────────│
+    │──ACK ───────────────────────────────►│
+    │──TLS ClientHello (L6) ─────────────►│
+    │◄─ServerHello + Certificate ─────────│
+    │──GET /index.html HTTP/1.1 ──────────►│
+    │◄─200 OK + HTML content ─────────────│
+    │──Browser renders page               │
+
+ENCAPSULATION FLOW (top-down):
+  App Data → [L6 encrypt] → [L5 session] →
+  [L4 TCP seg] → [L3 IP pkt] → [L2 frame] → [L1 bits]`,
+   lab:`PACKET TRACER LAB — HTTP Server
+──────────────────────────────────────────────
+Topology: Server0 ──Switch── PC0
+
+1. Server0 → Services → HTTP → toggle ON
+   (Optionally enable HTTPS on port 443)
+
+2. PC0 IP Config:
+   IP: 192.168.1.10/24  GW: 192.168.1.1
+
+3. PC0 Web Browser → http://192.168.1.1
+   Expected: Default Cisco PT webpage loads
+
+4. Simulation Mode: observe HTTP GET (L7 PDU)
+   leaving PC0 and HTTP 200 response returning
+
+VERIFICATION COMMANDS:
+  PC>  ipconfig
+  PC>  ping 192.168.1.1
+  PC>  nslookup server.pt.pka  (if DNS enabled)
+  Svr> show ip service          (IOS devices)
+
+TROUBLESHOOTING:
+  Page won't load → ping first (tests L3)
+  Ping works, page fails → check HTTP service ON
+  DNS fails → verify DNS server IP in PC config`,
+   security:`SECURITY — APPLICATION LAYER
+──────────────────────────────────────────────
+Attacks: SQL injection, buffer overflow,
+  phishing via email, malicious DNS responses,
+  cross-site scripting (XSS), malware payloads
+
+Mitigations:
+  • Use TLS/HTTPS — encrypts HTTP payload
+  • WAF — blocks SQLi, XSS, OWASP Top 10
+  • Input validation on all application inputs
+  • DNSSEC — prevents DNS poisoning
+  • SMTP filtering — blocks phishing emails
+
+Verification: curl -v https://host (check TLS)
+  telnet <ip> 80 (test if port is open/responding)
+  Review application logs for error patterns`},
+
+  {n:6,name:"Presentation",cl:"l6",pdu:"Data (content transformed, no new header)",
+   desc:"Acts as the network's translator or syntax layer. Handles data formatting, character encoding, compression, and encryption/decryption. Ensures data from the Application layer is in a standard form understood by both ends. In modern stacks, SSL/TLS encryption runs at this boundary.",
+   protos:["TLS 1.3 / SSL","SSH (terminal encryption)","JPEG / PNG / GIF / WEBP","MPEG / H.264 / H.265","ASCII / UTF-8 / EBCDIC","Base64","gzip / Brotli / Deflate","MIME encoding"],
+   fns:["Data encoding and decoding (ASCII ↔ EBCDIC)","TLS/SSL encryption and decryption","Data compression and decompression","Character set and format conversion","Serialisation (JSON/XML ↔ binary)"],
+   devs:"TLS offload appliances · HSMs (Hardware Security Modules) · Compression proxies · VPN gateways · SSL/TLS accelerators",
+   pduFields:"No new header added. The content is modified in-place (encrypted or compressed). Transport layer receives the resulting data as its payload. The encryption state is managed via TLS Record headers embedded within the data stream.",
+   diag:`TLS 1.3 HANDSHAKE (Presentation Layer)
+──────────────────────────────────────────────
+  Client                          Server
+    │──ClientHello + key_share ──────────►│
+    │  (TLS versions, cipher suites)       │
+    │◄─ServerHello + key_share ───────────│
+    │  + Certificate + Finished           │
+    │  (Both derive session keys now)      │
+    │──Finished + HTTP request ───────────►│
+    │◄─Encrypted HTTP response ───────────│
+
+TLS 1.3: 1 round trip (1-RTT)
+TLS 1.2: 2 round trips (2-RTT) — slower
+0-RTT resumption: zero round trips on reconnect
+
+COMPRESSION EXAMPLE:
+  Raw HTML: 120KB → gzip → 28KB sent on wire
+  Decompressed by browser before rendering`,
+   lab:`PACKET TRACER LAB — FTP File Transfer
+──────────────────────────────────────────────
+Topology: Server0 ──Switch── PC0
+
+1. Server0 → Services → FTP → toggle ON
+   Add user: username=admin password=cisco
+
+2. PC0 Command Prompt:
+   PC> ftp 192.168.1.1
+   Username: admin  Password: cisco
+   ftp> put test.txt      (upload file)
+   ftp> get test.txt      (download file)
+   ftp> dir               (list files)
+   ftp> quit
+
+3. Verify file appears in server FTP directory
+4. Simulation Mode: observe FTP commands
+   (Presentation layer prepares file data)
+
+VERIFICATION:
+  Confirm file size matches after transfer
+  If transfer fails: ping first, check FTP=ON,
+  verify correct username/password`,
+   security:`SECURITY — PRESENTATION LAYER
+──────────────────────────────────────────────
+Attacks targeting encryption/encoding:
+  • SSL downgrade attacks (force weak cipher)
+  • BEAST, POODLE — exploited TLS 1.0/SSL 3.0
+  • CRIME, BREACH — compression oracle attacks
+  • Man-in-the-middle on TLS (cert spoofing)
+  • Malformed encoding (JPEG/GIF exploits)
+
+Mitigations:
+  • Enforce TLS 1.2 minimum, prefer TLS 1.3
+  • Use strong AEAD ciphers (AES-256-GCM)
+  • Valid certificates from trusted CAs
+  • HSTS — forces HTTPS, prevents downgrade
+  • Disable HTTP compression with secrets
+
+Verification:
+  openssl s_client -connect host:443
+  (check certificate, cipher suite, TLS version)`},
+
+  {n:5,name:"Session",cl:"l5",pdu:"Data (session identifiers may be embedded)",
+   desc:"Establishes, manages, and terminates sessions (dialogues) between application processes. Provides mechanisms for authentication, dialog control, synchronisation points (checkpoints) in long data streams, and recovery. TCP/IP often combines session functions into Transport/Application layers, but classic examples include RPC, SIP sessions, and PPP CHAP authentication.",
+   protos:["RPC (Remote Procedure Call)","PPTP","SIP (VoIP session control)","NetBIOS","SQL*Net (Oracle sessions)","SMB (file sharing sessions)","PAP / CHAP (PPP auth)","NCP (NetWare)"],
+   fns:["Session establishment and teardown","Dialog control (simplex / half / full duplex)","Synchronisation checkpoint insertion","Session recovery after failure","Authentication token and state management"],
+   devs:"Session Border Controllers (VoIP) · Application proxies · VPN concentrators · Firewalls (stateful session tracking)",
+   pduFields:"No distinct PDU header in most implementations. Session control info (dialogue identifiers, sync markers, tokens) may be embedded in application data. Packet Tracer does not render session headers explicitly.",
+   diag:`SESSION CHECKPOINTING & RECOVERY
+──────────────────────────────────────────────
+  Client                          Server
+    │──Session Request ───────────────────►│
+    │◄─Session Accept (ID: 4821) ──────────│
+    │                                      │
+    │──Data block 1 (checkpoint 1) ───────►│ ✓
+    │──Data block 2 (checkpoint 2) ───────►│ ✓
+    │──Data block 3 ──────────────────────►│ ✗ CRASH
+    │                                      │
+    │──Resume from checkpoint 2 ──────────►│
+    │──Data block 3 (resend) ─────────────►│ ✓
+    │──Session Terminate ─────────────────►│
+
+PPP CHAP AUTHENTICATION (Session layer):
+  R1──Challenge (random nonce) ───────────►R2
+  R2◄─Response (hash: nonce+password) ────R1
+  R1──Success / Failure ───────────────────►R2`,
+   lab:`PACKET TRACER LAB — PPP CHAP Authentication
+──────────────────────────────────────────────
+Topology: R1 ──Serial0/0── R2
+
+R1 Configuration:
+  username R2 password cisco
+  interface Serial0/0
+    encapsulation ppp
+    ppp authentication chap
+    no shutdown
+
+R2 Configuration:
+  username R1 password cisco
+  interface Serial0/0
+    encapsulation ppp
+    ppp authentication chap
+    no shutdown
+
+VERIFICATION:
+  R1# show interface serial0/0
+  Expected: "Serial0/0 is up, line protocol is up"
+  R1# show controllers serial0/0
+  R1# debug ppp negotiation   (watch CHAP exchange)
+
+TROUBLESHOOTING:
+  Line protocol down → check usernames match
+  Auth fails → passwords must be identical
+  Mismatch → "authentication failed" in debug`,
+   security:`SECURITY — SESSION LAYER
+──────────────────────────────────────────────
+Attacks:
+  • Session hijacking — stealing session tokens
+    (e.g. TCP session takeover, cookie theft)
+  • Replay attacks — reusing captured session IDs
+  • Weak session tokens — predictable/short IDs
+  • Session fixation — forcing known session ID
+
+Mitigations:
+  • Strong random session tokens (128-bit+)
+  • Session timeouts and re-authentication
+  • CHAP over PAP (hashed vs plaintext auth)
+  • TLS to protect session tokens in transit
+  • Session invalidation on logout
+
+Verification:
+  show session          (Cisco IOS)
+  Application logs — check for session anomalies
+  Monitor for multiple sessions from one user`},
+
+  {n:4,name:"Transport",cl:"l4",pdu:"Segment (TCP) / Datagram (UDP)",
+   desc:"Provides end-to-end data delivery between hosts. Segments upper-layer data and manages reliability, flow control, and port-based multiplexing. TCP is connection-oriented and reliable; UDP is connectionless and fast. Both use port numbers to direct traffic to the correct application process on the destination host.",
+   protos:["TCP (reliable, ordered, connection-oriented)","UDP (fast, connectionless, no guarantee)","SCTP (multi-stream, multi-homed)","QUIC (UDP-based, 0-RTT, HTTP/3)","DCCP"],
+   fns:["Port-based multiplexing (ports 0–65535)","Segmentation and reassembly of data","Flow control via sliding window (TCP)","Error detection and retransmission (TCP)","Connection establishment and teardown"],
+   devs:"Stateful firewalls · L4 load balancers · NAT devices · IDS/IPS",
+   pduFields:`TCP SEGMENT HEADER FIELDS:
+  Source Port (16-bit) — sending application
+  Destination Port (16-bit) — receiving application
+  Sequence Number (32-bit) — byte ordering
+  Acknowledgment Number (32-bit) — reliability
+  Header Length (4-bit) + Reserved
+  Control Flags: URG ACK PSH RST SYN FIN
+  Window Size (16-bit) — flow control
+  Checksum (16-bit) — error detection
+  Urgent Pointer + Options (e.g. MSS)
+
+UDP DATAGRAM HEADER FIELDS:
+  Source Port (16-bit)
+  Destination Port (16-bit)
+  Length (16-bit)
+  Checksum (16-bit)  [only 8 bytes total!]`,
+   diag:`TCP 3-WAY HANDSHAKE + FLOW CONTROL
+──────────────────────────────────────────────
+  Client                          Server
+    │──SYN (seq=100, win=65535) ──────────►│
+    │◄─SYN-ACK (seq=500, ack=101) ─────────│
+    │   MSS=1460, win=64240                │
+    │──ACK (ack=501) ──────────────────────►│
+    ✓ CONNECTION ESTABLISHED
+
+SLIDING WINDOW (flow control):
+  Window=3: send 3 segments before waiting ACK
+  │──Seg1──►│──Seg2──►│──Seg3──►│  (wait)
+  │◄─ACK1 ────────────────────────│
+  │──Seg4──►│  window slides right →
+
+TCP 4-WAY CLOSE:
+  Client──FIN──►│◄──ACK──│◄──FIN──│──ACK──►
+  TIME_WAIT = 2×MSL before port released
+
+UDP: No handshake. No ACK. No order guarantee.
+  Best for: DNS, VoIP, video, DHCP, TFTP`,
+   lab:`PACKET TRACER LAB — TCP vs UDP
+──────────────────────────────────────────────
+LAB A — TCP (Telnet):
+  R1# line vty 0 4
+  R1#   password cisco
+  R1#   login
+  R1# interface Gi0/0
+  R1#   ip address 192.168.1.1 255.255.255.0
+
+  PC> telnet 192.168.1.1
+  Expected: router login prompt
+
+  R1# show tcp brief       ← shows TCP connections
+  R1# show users           ← shows active sessions
+
+LAB B — UDP (DNS):
+  Server: Services → DNS → add A record
+    Name: server.local   IP: 192.168.1.1
+  PC IP config: DNS server = Server IP
+
+  PC> nslookup server.local
+  Simulation Mode: observe UDP DNS query/response
+
+VERIFICATION:
+  show tcp brief          (active TCP connections)
+  show udp statistics     (UDP counters)
+  netstat -an             (Linux/PC — all sockets)
+  telnet <ip> <port>      (test if TCP port open)
+
+TROUBLESHOOTING:
+  TCP not connecting → check ACL, service running
+  UDP DNS failing → verify DNS server IP, service ON
+  MTU issues → large transfers fail, small work`,
+   security:`SECURITY — TRANSPORT LAYER
+──────────────────────────────────────────────
+Attacks:
+  • TCP SYN flood — exhaust half-open connections
+  • TCP session hijacking — spoof seq numbers
+  • UDP flood — overwhelm with datagrams
+  • Port scanning — enumerate open services
+  • Fragmentation attacks — overlapping fragments
+
+Mitigations:
+  • SYN cookies — protect against SYN floods
+  • Firewall rules — only open required ports
+  • TCP sequence randomisation (OS-level)
+  • Rate limiting — per-source connection limits
+  • TLS over TCP — encrypts transport payload
+
+Verification:
+  telnet <ip> <port>    (test TCP port reachability)
+  show tcp brief        (Cisco — active connections)
+  show udp statistics   (UDP drop/error counters)
+  netstat -tulnp        (Linux — listening ports)
+  Check for MTU mismatches if large packets drop`},
+
+  {n:3,name:"Network",cl:"l3",pdu:"Packet (IP Datagram)",
+   desc:"Responsible for logical addressing and routing of packets between end devices across multiple networks. Determines the best path (routing) and forwards packets hop-by-hop. Also handles fragmentation/reassembly and traffic classification (DSCP/QoS). Every router operates at this layer.",
+   protos:["IPv4","IPv6","ICMP / ICMPv6","IGMP","OSPF","EIGRP","BGP","ARP (IP→MAC mapping)","MPLS","GRE / IPSec"],
+   fns:["Logical IP addressing (source and destination)","Inter-network routing (hop-by-hop forwarding)","Path determination via routing table (LPM)","Packet fragmentation and reassembly","TTL management to prevent routing loops"],
+   devs:"Routers · L3 switches · Firewalls (L3 ACLs) · VPN concentrators",
+   pduFields:`IPv4 PACKET HEADER FIELDS:
+  Version (4-bit): 4 for IPv4
+  Header Length (4-bit): in 32-bit words
+  DSCP/TOS (8-bit): QoS marking
+  Total Length (16-bit): header + data
+  Identification (16-bit): fragmentation ID
+  Flags (3-bit) + Fragment Offset (13-bit)
+  TTL (8-bit): decremented each hop; 0=drop
+  Protocol (8-bit): 6=TCP, 17=UDP, 1=ICMP
+  Header Checksum (16-bit)
+  Source IP Address (32-bit)
+  Destination IP Address (32-bit)
+  Options (variable, rarely used)`,
+   diag:`IP ROUTING — HOP-BY-HOP FORWARDING
+──────────────────────────────────────────────
+  PC1 (10.1.1.10) ──► R1 ──► R2 ──► PC2 (10.2.2.20)
+
+  At R1: dst=10.2.2.20
+  Routing table lookup (Longest Prefix Match):
+    10.1.1.0/24 via Gi0/0  → no match
+    10.2.0.0/16 via Gi0/1  → MATCH
+  Action: TTL 64→63, rewrite L2 MAC, forward Gi0/1
+
+  SHOW IP ROUTE (R1):
+  C  10.1.1.0/24  [0/0]  Gi0/0 (connected)
+  O  10.2.0.0/16  [110/2] via 10.0.0.2 (OSPF)
+  S* 0.0.0.0/0   [1/0]   via 203.0.113.1
+
+  TRACEROUTE RESULT:
+  1  10.0.0.1  (R1)   1ms
+  2  10.0.0.2  (R2)   2ms
+  3  10.2.2.20 (PC2)  3ms`,
+   lab:`PACKET TRACER LAB — IP Routing with RIP
+──────────────────────────────────────────────
+Topology: PC1──R1──(Serial)──R2──PC2
+
+R1 Configuration:
+  interface GigabitEthernet0/0
+    ip address 192.168.1.1 255.255.255.0
+    no shutdown
+  interface Serial0/0
+    ip address 10.0.0.1 255.255.255.252
+    no shutdown
+  router rip
+    version 2
+    network 192.168.1.0
+    network 10.0.0.0
+    no auto-summary
+
+R2 Configuration (mirror):
+  interface GigabitEthernet0/0
+    ip address 192.168.2.1 255.255.255.0
+  interface Serial0/0
+    ip address 10.0.0.2 255.255.255.252
+  router rip
+    version 2
+    network 192.168.2.0
+    network 10.0.0.0
+
+VERIFICATION:
+  R1# show ip route        ← RIP routes appear
+  R1# show ip interface brief
+  PC1> ping 192.168.2.10   ← cross-router ping
+
+TROUBLESHOOTING:
+  No route → check 'show ip route', RIP config
+  Ping fails → use traceroute to find break point
+  debug ip rip → watch RIP update exchanges`,
+   security:`SECURITY — NETWORK LAYER
+──────────────────────────────────────────────
+Attacks:
+  • IP spoofing — forged source IP addresses
+  • BGP hijacking — inject false route announcements
+  • OSPF route injection — rogue router attack
+  • ICMP attacks — smurf, ping flood, ICMP redirect
+  • Fragmentation attacks — Teardrop, overlapping
+
+Mitigations:
+  • uRPF (Unicast Reverse Path Forwarding)
+    — drops packets with spoofed source IPs
+  • IPSec — encrypts and authenticates IP traffic
+  • BGP route filtering + RPKI — valid prefixes only
+  • OSPF authentication (MD5/SHA)
+  • ACLs — block unauthorised source addresses
+  • Rate-limit ICMP at network edge
+
+Verification:
+  ping <host>           (ICMP L3 reachability)
+  traceroute <host>     (hop-by-hop path)
+  show ip route         (routing table check)
+  show ip nat translations  (NAT state)
+  show ip interface     (interface IP/status)`},
+
+  {n:2,name:"Data Link",cl:"l2",pdu:"Frame",
+   desc:"Handles node-to-node data transfer on the same network link. Frames packets from the Network layer, adds MAC addressing, performs error detection via CRC/FCS, and manages media access control. Switches and bridges operate here, learning MAC addresses to forward frames to the correct port only.",
+   protos:["Ethernet IEEE 802.3","Wi-Fi IEEE 802.11","PPP / HDLC (point-to-point)","802.1Q VLAN tagging","RSTP 802.1w (loop prevention)","LACP 802.3ad (EtherChannel)","ARP (IP→MAC)","LLDP / CDP"],
+   fns:["MAC addressing (48-bit hardware address)","Frame construction with preamble and FCS","Error detection via CRC (Frame Check Sequence)","Media access control (CSMA/CD and CSMA/CA)","VLAN segmentation and 802.1Q tagging"],
+   devs:"Switches · Network bridges · Wireless APs · NICs · Transparent bridges",
+   pduFields:`ETHERNET FRAME (802.3) FIELDS:
+  Preamble (7 bytes): 10101010... sync bits
+  SFD (1 byte): 10101011 — start of frame
+  Destination MAC (6 bytes): next-hop MAC
+  Source MAC (6 bytes): sender NIC MAC
+  EtherType/Length (2 bytes):
+    0x0800 = IPv4  0x86DD = IPv6
+    0x0806 = ARP   0x8100 = 802.1Q tag
+  Payload (46–1500 bytes): IP packet
+  FCS (4 bytes): CRC-32 error detection
+
+802.1Q VLAN TAG (inserted after Src MAC):
+  TPID (2B): 0x8100
+  PCP (3-bit): QoS priority (0–7)
+  DEI (1-bit): drop eligible indicator
+  VID (12-bit): VLAN ID 0–4095`,
+   diag:`ETHERNET FRAME STRUCTURE
+──────────────────────────────────────────────
+│Preamble│SFD│Dst MAC│Src MAC│EType│Payload│FCS│
+│  7B    │1B │  6B   │  6B   │ 2B  │≤1500B │4B │
+│1010..  │AB │       │       │0800 │IP pkt │CRC│
+
+SWITCH MAC LEARNING & FORWARDING:
+  Frame in on port 3 (src=AA:BB:CC:DD:EE:01)
+  → Record: AA:BB:CC:DD:EE:01 = port 3
+
+  Lookup dst MAC AA:BB:CC:DD:EE:02:
+    Found in table → unicast to port 7 only
+    Not found      → flood all ports except 3
+    FF:FF:FF:FF:FF → flood all ports (broadcast)
+
+VLAN OPERATION:
+  PC1 (VLAN10, port1) sends to PC3 (VLAN20, port3)
+  → Switch checks VLAN membership
+  → Different VLAN = BLOCKED at L2
+  → Requires L3 router/SVI for inter-VLAN routing`,
+   lab:`PACKET TRACER LAB — VLANs & Switching
+──────────────────────────────────────────────
+Topology: PC1──┐            ┌──PC3
+               Switch──────── (one switch)
+          PC2──┘            └──PC4
+
+Switch Configuration:
+  vlan 10
+    name Finance
+  vlan 20
+    name Sales
+  interface FastEthernet0/1
+    switchport mode access
+    switchport access vlan 10
+  interface FastEthernet0/2
+    switchport mode access
+    switchport access vlan 10
+  interface FastEthernet0/3
+    switchport mode access
+    switchport access vlan 20
+  interface FastEthernet0/4
+    switchport mode access
+    switchport access vlan 20
+
+VERIFICATION:
+  SW# show vlan brief
+  SW# show mac address-table
+  SW# show interface status
+  PC1> ping PC2  ← same VLAN: SUCCESS
+  PC1> ping PC3  ← diff VLAN: FAIL (expected)
+
+TROUBLESHOOTING:
+  Ping fails same VLAN → check vlan assignment
+  show mac address-table → confirm MACs learned
+  CRC errors → show interfaces (duplex mismatch?)`,
+   security:`SECURITY — DATA LINK LAYER
+──────────────────────────────────────────────
+Attacks:
+  • MAC flooding — fill MAC table, force flooding
+    (attacker sees all frames — CAM table overflow)
+  • ARP poisoning/spoofing — send fake ARP replies
+    (maps attacker MAC to legitimate IP = MITM)
+  • VLAN hopping — exploit native VLAN or DTP
+    (double-tagging to reach another VLAN)
+  • Rogue DHCP server — supply false IPs/gateway
+
+Mitigations:
+  • Port Security — limit MACs per port
+    switchport port-security maximum 2
+    switchport port-security violation shutdown
+  • Dynamic ARP Inspection (DAI) — validates ARP
+    against DHCP snooping binding table
+  • DHCP Snooping — blocks rogue DHCP on untrusted
+  • 802.1X — port-based NAC, authenticate devices
+  • Disable DTP: switchport nonegotiate
+
+Verification:
+  show mac address-table    (MAC-to-port mapping)
+  show arp                  (IP-to-MAC mappings)
+  show vlan brief           (VLAN port assignments)
+  show interface counters errors  (CRC/collision)
+  show ip dhcp snooping binding   (DHCP table)`},
+
+  {n:1,name:"Physical",cl:"l1",pdu:"Bits (electrical / optical / radio signals)",
+   desc:"Transmits raw bits over the physical medium. Defines electrical/optical/radio signalling, cabling standards, connectors, voltages, timing, and bit synchronisation. Converts frames from the Data Link layer into physical signals and reconstructs them on receipt. This is the only OSI layer that touches the actual transmission medium.",
+   protos:["Ethernet 1000BASE-T (Cat5e copper)","Ethernet 10GBASE-T (Cat6A copper)","100GBASE-SR4 (MMF fibre)","400GBASE-ZR (SMF, 80km DWDM)","Wi-Fi 6 IEEE 802.11ax","5G NR (New Radio)","DSL / VDSL2","SONET / SDH (legacy carrier)"],
+   fns:["Bit encoding (NRZ, Manchester, 4B/5B, 64b/66b)","Signal modulation (QAM, OFDM, PAM4)","Signal amplification and repeating","Physical topology definition","Cable and connector specifications (RJ45, LC, MPO)"],
+   devs:"Hubs (legacy repeaters) · Repeaters · Media converters · Modems · SFP/SFP+/QSFP28/QSFP-DD transceivers · Patch panels · NICs (PHY chip)",
+   pduFields:`No headers or trailers added at Layer 1.
+Data is a raw stream of bits (0s and 1s).
+Encoding converts bits to physical signals:
+
+  Bit Encoding Examples:
+  NRZ      — voltage high=1, low=0 (simple)
+  Manchester — transition mid-bit (self-clocking)
+  4B/5B    — 4 data bits → 5 signal bits
+  64b/66b  — used in 10GbE, 25GbE, 100GbE
+  PAM4     — 4 amplitude levels (400GbE)
+
+  Each symbol carries more bits with higher
+  encoding, increasing efficiency on the wire.`,
+   diag:`PHYSICAL MEDIA COMPARISON
+──────────────────────────────────────────────
+Medium         Speed       Max Dist  Standard
+──────────────────────────────────────────────
+Cat5e UTP      1 Gbps      100m      802.3ab
+Cat6 UTP       10 Gbps     55m       802.3an
+Cat6A UTP      10 Gbps     100m      802.3an
+MMF OM3        10 Gbps     300m      802.3ae
+MMF OM4        100 Gbps    150m      802.3bm
+SMF OS2        100 Gbps    40km      802.3ba
+SMF OS2        400 Gbps    10km      802.3bs
+Wi-Fi 5 (ac)   3.5 Gbps    ~35m      802.11ac
+Wi-Fi 6 (ax)   9.6 Gbps    ~35m      802.11ax
+5G mmWave      20 Gbps     200m      3GPP R16
+
+TRANSCEIVER FORM FACTORS:
+  SFP   = 1 Gbps     SFP+ = 10 Gbps
+  SFP28 = 25 Gbps    QSFP28 = 100 Gbps
+  QSFP-DD = 400 Gbps  OSFP = 400 Gbps+`,
+   lab:`PACKET TRACER LAB — Cabling & Interfaces
+──────────────────────────────────────────────
+Topology: PC──Switch──Switch──Router
+
+1. Connect devices using appropriate cables:
+   PC → Switch:     Straight-through copper
+   Switch → Switch: Crossover (or auto-MDIX)
+   Router → Switch: Straight-through copper
+   Router → Router: Serial DCE/DTE cable
+
+2. Configure interface speed/duplex (switch):
+   SW# interface GigabitEthernet0/1
+   SW#   speed 1000
+   SW#   duplex full
+   SW#   no shutdown
+
+3. Unplug cable → observe interface goes DOWN
+   Reconnect → observe interface comes UP
+
+VERIFICATION:
+  SW# show interfaces           (full status + counters)
+  SW# show interfaces status    (up/down per port)
+  SW# show interfaces Gi0/1     (speed, duplex, errors)
+  R1# show controllers serial0/0 (clock rate, cable)
+
+TROUBLESHOOTING:
+  Interface down → check cable type (straight/cross)
+  Speed mismatch → force same speed both ends
+  CRC errors → possible duplex mismatch or bad cable
+  Collisions → half-duplex or faulty NIC`,
+   security:`SECURITY — PHYSICAL LAYER
+──────────────────────────────────────────────
+Threats:
+  • Unauthorised cable access — plug into open port
+  • Fibre tapping — optical splitter to intercept
+  • EMI interference — disrupt signals (jamming)
+  • Signal attenuation — degrade link over distance
+  • Power line noise — induced on unshielded cables
+  • Physical destruction — cut cables, damage ports
+
+Mitigations:
+  • Lock server rooms and comms closets (IDF/MDF)
+  • Use STP (Shielded Twisted Pair) in EMI areas
+  • Proper cable management and labelling
+  • Fibre over copper for sensitive runs (harder tap)
+  • Disable unused switch ports:
+      interface range Fa0/10-24
+        shutdown
+  • Monitor interface error counters for anomalies
+
+Verification:
+  show controllers          (router physical stats)
+  show interfaces           (CRC, input errors, resets)
+  show interfaces counters errors  (per-port error count)
+  ping <host>               (end-to-end physical path)
+  Cable tester / OTDR       (physical layer tool)`}
+];
+
+osiData.forEach(l=>addIdx(`Layer ${l.n}: ${l.name}`,'OSI Model',l.desc+' '+l.protos.join(' '),'#osi'));
+const osiStack=document.getElementById('osis');
+osiData.forEach((l,i)=>{
+  const el=document.createElement('div');
+  el.className=`osil ${l.cl}`;
+  el.innerHTML=`<span><strong>L${l.n}</strong> — ${l.name}</span><span style="font-size:.67rem;font-family:var(--mono);opacity:.8">${l.pdu.split(' ')[0]}</span>`;
+  el.onclick=()=>{document.querySelectorAll('.osil').forEach(x=>x.classList.remove('active'));el.classList.add('active');showOSI(l)};
+  osiStack.appendChild(el);
+});
+function showOSI(l){
+  document.getElementById('osid').innerHTML=`
+    <div class="pdub">PDU: ${l.pdu}</div>
+    <h3 style="font-size:1.15rem;margin-bottom:.2rem">Layer ${l.n}: ${l.name}</h3>
+    <div style="color:var(--ac);font-family:var(--mono);font-size:.72rem;margin-bottom:.65rem">// L${l.n} / ${l.name.toUpperCase()}</div>
+    <p style="color:var(--mut);font-size:.82rem;margin-bottom:.75rem;line-height:1.55">${l.desc}</p>
+    <div class="dbox"><div class="dlbl">PROCESS FLOW DIAGRAM</div><pre>${l.diag}</pre></div>
+    <div class="dbox" style="border-color:rgba(124,58,237,.35)"><div class="dlbl" style="color:#a78bfa">PDU HEADER FIELDS</div><pre style="color:#c4b5fd">${l.pduFields}</pre></div>
+    <div class="osig">
+      <div class="osic"><h4>Protocols</h4><ul>${l.protos.map(p=>`<li>${p}</li>`).join('')}</ul></div>
+      <div class="osic"><h4>Functions</h4><ul>${l.fns.map(f=>`<li>${f}</li>`).join('')}</ul></div>
+      <div class="osic" style="grid-column:1/-1"><h4>Devices at This Layer</h4><p>${l.devs}</p></div>
+      <div class="osic" style="grid-column:1/-1;border-left:3px solid var(--ac3)"><h4 style="color:var(--ac3)">Packet Tracer Lab</h4><pre style="font-family:var(--mono);font-size:.7rem;color:var(--mut);white-space:pre-wrap;line-height:1.5">${l.lab}</pre></div>
+      <div class="osic" style="grid-column:1/-1;border-left:3px solid var(--danger)"><h4 style="color:var(--danger)">Security Considerations</h4><pre style="font-family:var(--mono);font-size:.7rem;color:var(--mut);white-space:pre-wrap;line-height:1.5">${l.security}</pre></div>
+    </div>`;
+}
+
+// ── CONFIGS ──────────────────────────────────────────
+const cfgs={
+  routing:[
+    {t:"OSPF Single-Area (Cisco IOS)",cat:"Routing",
+     code:`router ospf 1
+  router-id 1.1.1.1
+  network 192.168.10.0 0.0.0.255 area 0
+  network 10.0.0.0 0.0.0.3 area 0
+  passive-interface GigabitEthernet0/1
+  auto-cost reference-bandwidth 10000
+interface GigabitEthernet0/0
+  ip ospf 1 area 0
+  ip ospf hello-interval 10
+  ip ospf dead-interval 40
+  ip ospf authentication message-digest
+  ip ospf message-digest-key 1 md5 S3cr3t!`,
+     ex:"passive-interface stops OSPF hellos on stub links. auto-cost reference-bandwidth 10000 = 10Gbps reference so 1G costs 10 not 1. MD5 auth prevents rogue router adjacencies."},
+    {t:"BGP Dual-ISP with Local Preference",cat:"Routing",
+     code:`router bgp 65001
+  bgp router-id 10.0.0.1
+  neighbor 203.0.113.2 remote-as 1234
+  neighbor 203.0.113.2 description ISP-A-PRIMARY
+  neighbor 203.0.113.2 route-map PREF-HIGH in
+  neighbor 198.51.100.2 remote-as 5678
+  neighbor 198.51.100.2 description ISP-B-BACKUP
+  neighbor 198.51.100.2 route-map PREF-LOW in
+  network 198.18.0.0 mask 255.255.0.0
+!
+route-map PREF-HIGH permit 10
+  set local-preference 200
+route-map PREF-LOW permit 10
+  set local-preference 100`,
+     ex:"Local Preference (higher = preferred) controls outbound path selection across your AS. All routers prefer ISP-A. If ISP-A withdraws its routes, ISP-B (LP=100) takes over automatically."},
+    {t:"Static Routes + IP SLA Tracking",cat:"Routing",
+     code:`ip sla 1
+  icmp-echo 203.0.113.1 source-ip 203.0.113.2
+  frequency 5
+ip sla schedule 1 life forever start-time now
+track 1 ip sla 1 reachability
+!
+! Primary — only active if track 1 is up
+ip route 0.0.0.0 0.0.0.0 203.0.113.1 track 1
+! Floating static — activates on primary failure
+ip route 0.0.0.0 0.0.0.0 198.51.100.1 10`,
+     ex:"IP SLA probes every 5s. If probe fails, track goes down, primary route removed. Floating static (AD=10) then activates. Lightweight ISP failover without BGP."},
+    {t:"OSPF Multi-Area + ABR Summary",cat:"Routing",
+     code:`router ospf 1
+  router-id 2.2.2.2
+  network 10.0.0.0 0.0.0.255 area 0
+  network 10.1.0.0 0.0.0.255 area 1
+  network 10.2.0.0 0.0.0.255 area 2
+  area 1 range 10.1.0.0 255.255.0.0
+  area 2 stub no-summary`,
+     ex:"ABR summarises Area 1 into one LSA (10.1.0.0/16) into Area 0. 'stub no-summary' (totally stubby) blocks Type-3 and Type-5 LSAs, leaving only a default route — ideal for remote branch areas."}
+  ],
+  switching:[
+    {t:"VLAN + Trunk + Voice VLAN",cat:"Switching",
+     code:`vlan 10
+  name PRODUCTION
+vlan 20
+  name VOICE
+vlan 99
+  name NATIVE-UNUSED
+! PC access port
+interface FastEthernet0/1
+  switchport mode access
+  switchport access vlan 10
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+! VoIP port (data + voice VLAN)
+interface FastEthernet0/2
+  switchport mode access
+  switchport access vlan 10
+  switchport voice vlan 20
+  mls qos trust cos
+  spanning-tree portfast
+! Trunk
+interface GigabitEthernet0/1
+  switchport mode trunk
+  switchport trunk native vlan 99
+  switchport trunk allowed vlan 10,20,30`,
+     ex:"Voice VLAN lets phone and PC share one port. 'mls qos trust cos' honours QoS bits the phone sets. Native VLAN 99 (unused) prevents VLAN hopping — never use VLAN 1 as native."},
+    {t:"Rapid PVST+ STP Tuning",cat:"Switching",
+     code:`spanning-tree mode rapid-pvst
+spanning-tree vlan 10 priority 4096
+! BPDU Guard on all access ports
+interface range FastEthernet0/1 - 24
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+! Root Guard on uplinks
+interface GigabitEthernet0/2
+  spanning-tree guard root
+! Loop Guard (unidirectional failure)
+interface GigabitEthernet0/1
+  spanning-tree guard loop`,
+     ex:"Priority 4096 < default 32768 = preferred root. BPDU Guard error-disables port if BPDU received (blocks rogue switches). Root Guard prevents connected device becoming root. Loop Guard detects unidirectional fibre failures."},
+    {t:"EtherChannel LACP",cat:"Switching",
+     code:`interface range GigabitEthernet0/1-2
+  channel-group 1 mode active
+  no shutdown
+interface Port-channel1
+  switchport mode trunk
+  switchport trunk native vlan 99
+  switchport trunk allowed vlan 10,20,30
+  no shutdown
+! Verify: show etherchannel summary`,
+     ex:"LACP 'active' sends negotiation PDUs. Both sides must match: speed, duplex, mode, native VLAN, allowed VLANs. STP sees Po1 as a single link — no blocking. Mismatch = err-down."},
+    {t:"Inter-VLAN Routing (SVI)",cat:"Switching",
+     code:`ip routing
+interface Vlan10
+  ip address 192.168.10.1 255.255.255.0
+  ip helper-address 10.0.0.100
+  no shutdown
+interface Vlan20
+  ip address 192.168.20.1 255.255.255.0
+  no shutdown
+! Routed uplink to core
+interface GigabitEthernet0/1
+  no switchport
+  ip address 10.0.0.2 255.255.255.252
+  ip ospf 1 area 0`,
+     ex:"SVIs act as default gateways. L3 switching is hardware-based (CEF) — line-rate routing. helper-address relays broadcast DHCP to central server as unicast. 'no switchport' creates a routed port — no trunk needed to core."}
+  ],
+  security:[
+    {t:"Extended ACL (Cisco IOS)",cat:"Security",
+     code:`ip access-list extended FILTER-IN
+  permit tcp any any established
+  permit tcp 10.0.5.0 0.0.0.255 10.0.10.0 0.0.0.255 eq 443
+  permit udp 10.0.0.0 0.0.255.255 any eq 53
+  permit icmp 10.0.0.0 0.0.255.255 any echo
+  permit icmp any 10.0.0.0 0.0.255.255 echo-reply
+  deny ip any any log
+!
+interface GigabitEthernet0/0
+  ip access-group FILTER-IN in`,
+     ex:"'established' matches TCP with ACK/RST — allows return traffic (stateless). Explicit 'deny log' at end captures dropped traffic for analysis. Apply ACLs close to source. Use ZBF for true stateful UDP/ICMP inspection."},
+    {t:"IPSec IKEv2 VTI (Cisco IOS)",cat:"Security",
+     code:`crypto ikev2 proposal PROP
+  encryption aes-cbc-256
+  integrity sha384
+  group 20
+crypto ikev2 policy 10
+  proposal PROP
+crypto ikev2 keyring KEYS
+  peer SITE-B
+    address 203.0.113.10
+    pre-shared-key local HQkey!
+    pre-shared-key remote Brkey!
+crypto ikev2 profile IKEv2P
+  match identity remote address 203.0.113.10
+  authentication local pre-share
+  authentication remote pre-share
+  keyring local KEYS
+crypto ipsec transform-set TS esp-aes-256-gcm
+  mode tunnel
+crypto ipsec profile IPSEC-P
+  set transform-set TS
+  set ikev2-profile IKEv2P
+interface Tunnel0
+  ip address 172.16.0.1 255.255.255.252
+  tunnel source GigabitEthernet0/0
+  tunnel destination 203.0.113.10
+  tunnel protection ipsec profile IPSEC-P`,
+     ex:"VTI (Virtual Tunnel Interface) is cleaner than crypto maps — supports dynamic routing (OSPF/BGP over tunnel). AES-256-GCM is AEAD (no separate HMAC). Group 20 = 384-bit ECDH. IKEv2 is single exchange, more efficient than IKEv1."},
+    {t:"DHCP Snooping + DAI + IP Source Guard",cat:"Security",
+     code:`ip dhcp snooping
+ip dhcp snooping vlan 10,20,30
+interface GigabitEthernet0/1
+  ip dhcp snooping trust
+interface range FastEthernet0/1-24
+  ip dhcp snooping limit rate 15
+!
+ip arp inspection vlan 10,20,30
+interface GigabitEthernet0/1
+  ip arp inspection trust
+!
+interface range FastEthernet0/1-24
+  ip verify source`,
+     ex:"DHCP Snooping builds MAC/IP/port binding table. DAI validates ARP against this table — drops ARP spoofing. IP Source Guard blocks frames from IPs not in the binding table. These three form the complete L2 security baseline."},
+    {t:"Zone-Based Firewall (ZBF)",cat:"Security",
+     code:`zone security INSIDE
+zone security OUTSIDE
+zone security DMZ
+!
+class-map type inspect match-any WEB
+  match protocol http
+  match protocol https
+!
+policy-map type inspect IN-TO-OUT
+  class type inspect WEB
+    inspect
+  class class-default
+    drop log
+!
+zone-pair security IN-OUT source INSIDE dest OUTSIDE
+  service-policy type inspect IN-TO-OUT
+!
+interface GigabitEthernet0/0
+  zone-member security INSIDE
+interface GigabitEthernet0/1
+  zone-member security OUTSIDE`,
+     ex:"ZBF is stateful — 'inspect' tracks sessions, return traffic allowed automatically. Inter-zone traffic is DENIED by default. Zone-pairs are directional. Replaces interface ACLs with a cleaner, policy-based model."}
+  ],
+  linux:[
+    {t:"ip Command Reference (iproute2)",cat:"Linux",
+     code:`# Interface management
+ip link show && ip -brief addr show
+ip link set eth0 up
+ip addr add 192.168.1.100/24 dev eth0
+ip addr del 192.168.1.100/24 dev eth0
+
+# Routes
+ip route add default via 192.168.1.1
+ip route add 10.0.0.0/8 via 192.168.1.1 dev eth0
+ip route del 10.0.0.0/8
+ip route show table all
+
+# ARP/Neighbour
+ip neigh show
+ip neigh flush dev eth0
+
+# Network namespaces (containers/VRF)
+ip netns add RED
+ip netns exec RED ip link show`,
+     ex:"'ip' (iproute2) replaces ifconfig/route — use for all scripting. 'table all' shows policy routing tables. Network namespaces isolate routing — foundation of Docker/k8s networking. Changes are NOT persistent — use Netplan for permanence."},
+    {t:"iptables Firewall Script",cat:"Linux",
+     code:`iptables -F && iptables -X
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -s 10.0.0.0/24 -p tcp --dport 22 \
+  -m state --state NEW -j ACCEPT
+iptables -A INPUT -p tcp -m multiport \
+  --dports 80,443 -m state --state NEW -j ACCEPT
+iptables -A INPUT -p icmp --icmp-type echo-request \
+  -m limit --limit 5/sec -j ACCEPT
+iptables -A INPUT -j LOG --log-prefix "DROP: " --log-level 4
+iptables -A INPUT -j DROP
+iptables-save > /etc/iptables/rules.v4`,
+     ex:"Allow SSH BEFORE setting default DROP or you lock yourself out. ESTABLISHED,RELATED allows all return traffic. Rate-limit ICMP to prevent flood. 'iptables-save' persists rules — install iptables-persistent on Ubuntu."},
+    {t:"tcpdump + ss Diagnostics",cat:"Linux",
+     code:`# tcpdump — packet capture
+tcpdump -i eth0 -n -v
+tcpdump -i eth0 host 192.168.1.1
+tcpdump -i eth0 tcp port 443
+tcpdump -i eth0 -w capture.pcap -s 0   # for Wireshark
+tcpdump -i eth0 'not port 22'           # exclude SSH
+tcpdump -i eth0 'icmp or arp'
+
+# ss — socket statistics (replaces netstat)
+ss -tlnp          # listening TCP ports + process
+ss -tnp state established  # active connections
+ss -unp           # UDP sockets
+ss -tlnpe         # extended socket details`,
+     ex:"tcpdump+Wireshark workflow: capture to .pcap, analyse in GUI. '-s 0' captures full packets. 'not port 22' removes SSH noise. 'ss -tlnp' is the first command when a service 'isn't listening'. 'state established' shows active connections."},
+    {t:"Netplan — Bond + VLAN (Ubuntu)",cat:"Linux",
+     code:`# /etc/netplan/01-network.yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3: {dhcp4: false}
+    ens4: {dhcp4: false}
+  bonds:
+    bond0:
+      interfaces: [ens3, ens4]
+      parameters:
+        mode: active-backup
+        mii-monitor-interval: 100
+      dhcp4: false
+  vlans:
+    bond0.10:
+      id: 10
+      link: bond0
+      addresses: [192.168.10.100/24]
+      routes:
+        - {to: default, via: 192.168.10.1}
+      nameservers:
+        addresses: [1.1.1.1, 8.8.8.8]
+# sudo netplan try   ← auto-reverts in 120s if not confirmed
+# sudo netplan apply ← permanent`,
+     ex:"'netplan try' is critical — auto-reverts if you don't confirm, preventing lockout on remote servers. 'active-backup' = failover; '802.3ad' = LACP (requires switch config). Bond+VLAN is the standard server NIC config in production."}
+  ]
+};
+Object.values(cfgs).flat().forEach(c=>addIdx(c.t,`Config: ${c.cat}`,c.ex,'#configs'));
+function renderCfgs(){
+  Object.entries(cfgs).forEach(([k,items])=>{
+    const panel=document.getElementById(`cp-${k}`);
+    const g=document.createElement('div');g.className='cgrid';
+    items.forEach(item=>{
+      const c=document.createElement('div');c.className='cc';
+      const saved=bms.find(b=>b.t===item.t);
+      c.innerHTML=`
+        <div class="cch">
+          <h4>${item.t}</h4>
+          <div class="cact">
+            <button class="bmbtn${saved?' saved':''}" onclick="bmCfg('${item.t}','${item.cat}',this)">🔖</button>
+            <button class="cpbtn" onclick="cpCode(this)">copy</button>
+          </div>
+        </div>
+        <pre>${item.code}</pre>
+        <div class="cex">💡 ${item.ex}</div>`;
+      g.appendChild(c);
+    });
+    panel.appendChild(g);
+  });
+}
+renderCfgs();
+function swTab(k,btn){
+  document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.cp').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');document.getElementById(`cp-${k}`).classList.add('active');
+}
+function cpCode(btn){
+  navigator.clipboard.writeText(btn.closest('.cc').querySelector('pre').textContent).then(()=>{
+    btn.textContent='copied!';toast('Copied!','success','✓');setTimeout(()=>btn.textContent='copy',2000);
+  });
+}
+function bmCfg(t,cat,btn){const added=addBM(t,cat);btn.classList.toggle('saved',added)}
+
+// ── PROTOCOLS ────────────────────────────────────────
+const protos=[
+  ["HTTP","80","Application","TCP","Web page transfer"],
+  ["HTTPS","443","Application","TCP","HTTP over TLS — encrypted web"],
+  ["HTTP/3","443","Application","QUIC","HTTP over QUIC — 0-RTT, multiplexed"],
+  ["FTP","20/21","Application","TCP","File transfer — data(20) control(21)"],
+  ["SFTP","22","Application","TCP","SSH file transfer — encrypted"],
+  ["SSH","22","Application","TCP","Encrypted remote CLI and tunnelling"],
+  ["Telnet","23","Application","TCP","Unencrypted CLI — legacy, avoid"],
+  ["SMTP","25","Application","TCP","Mail server-to-server delivery"],
+  ["SMTPS","465","Application","TCP","SMTP over TLS"],
+  ["SMTP+STARTTLS","587","Application","TCP","Preferred email submission port"],
+  ["IMAP","143","Application","TCP","Email sync across devices"],
+  ["IMAPS","993","Application","TCP","IMAP over TLS"],
+  ["POP3","110","Application","TCP","Download and delete email"],
+  ["POP3S","995","Application","TCP","POP3 over TLS"],
+  ["DNS","53","Application","TCP/UDP","Name to IP resolution"],
+  ["DNS over TLS","853","Application","TCP","Encrypted DNS queries (DoT)"],
+  ["DNS over HTTPS","443","Application","TCP","DNS over HTTPS (DoH)"],
+  ["DHCP","67/68","Application","UDP","Auto IP assignment (svr:67 cli:68)"],
+  ["DHCPv6","546/547","Application","UDP","DHCP for IPv6"],
+  ["TFTP","69","Application","UDP","Simple file transfer — no auth, boot images"],
+  ["NTP","123","Application","UDP","Clock synchronisation (<1ms accuracy)"],
+  ["SNMP","161/162","Application","UDP","Device polling (161) and traps (162)"],
+  ["SNMPv3","161/162","Application","UDP","SNMP with auth and encryption"],
+  ["LDAP","389","Application","TCP","Directory services (AD, OpenLDAP)"],
+  ["LDAPS","636","Application","TCP","LDAP over TLS"],
+  ["RDP","3389","Application","TCP","Windows remote desktop GUI"],
+  ["VNC","5900","Application","TCP","Cross-platform remote desktop"],
+  ["SIP","5060/5061","Application","TCP/UDP","VoIP call setup and teardown"],
+  ["RTP","16384+","Application","UDP","Voice/video media stream transport"],
+  ["Syslog","514","Application","UDP","Device event log messages"],
+  ["Syslog TLS","6514","Application","TCP","Encrypted reliable syslog"],
+  ["Kerberos","88","Application","TCP/UDP","Ticket-based auth (Active Directory)"],
+  ["RADIUS","1812/1813","Application","UDP","AAA for network access"],
+  ["TACACS+","49","Application","TCP","Cisco AAA — separates auth/authz/acct"],
+  ["BGP","179","Network","TCP","Internet routing between ASes"],
+  ["OSPF","89","Network","IP","Link-state IGP — RFC 2328"],
+  ["EIGRP","88","Network","IP","Cisco advanced hybrid routing"],
+  ["RIP","520","Network","UDP","Distance-vector IGP — max 15 hops"],
+  ["IS-IS","—","Network","CLNS","Link-state — used by large ISPs"],
+  ["ICMP","—","Network","IP","Ping, traceroute, TTL exceeded"],
+  ["ICMPv6","—","Network","IPv6","NDP, MLD, path MTU discovery"],
+  ["ARP","—","Data Link","Ethernet","Maps IP → MAC (broadcast)"],
+  ["NDP","—","Network","IPv6","IPv6 ARP+router+DHCP discovery"],
+  ["TCP","—","Transport","—","Reliable ordered connection-oriented"],
+  ["UDP","—","Transport","—","Fast connectionless no-guarantee"],
+  ["SCTP","—","Transport","—","Multi-stream multi-homed (VoIP signalling)"],
+  ["QUIC","443","Transport","UDP","0-RTT UDP transport for HTTP/3"],
+  ["TLS 1.3","—","Presentation","TCP","AEAD only, 1-RTT, no RSA key exchange"],
+  ["DTLS","—","Presentation","UDP","TLS for UDP (WebRTC, DTLS-SRTP)"],
+  ["IPSec/IKEv2","500/4500","Network","UDP","VPN encryption — IKEv2 negotiation"],
+  ["WireGuard","51820","Network","UDP","Modern VPN — ChaCha20, 4K lines of code"],
+  ["OpenVPN","1194","Application","UDP","TLS-based VPN — firewall-friendly"],
+  ["GRE","47","Network","IP","Generic Routing Encapsulation tunnelling"],
+  ["VXLAN","4789","Data Link","UDP","L2 over L3 overlay — 24-bit VNI"],
+  ["GENEVE","6081","Data Link","UDP","Flexible overlay with TLV metadata"],
+  ["MPLS","—","Layer 2.5","—","Label-switched paths — WAN/DC transport"],
+  ["LLDP","—","Data Link","Ethernet","Vendor-neutral neighbour discovery"],
+  ["CDP","—","Data Link","Ethernet","Cisco neighbour discovery"],
+  ["STP","—","Data Link","Ethernet","Loop prevention 802.1D — 50s convergence"],
+  ["RSTP","—","Data Link","Ethernet","Rapid STP 802.1w — <1s convergence"],
+  ["MSTP","—","Data Link","Ethernet","Multiple STP per VLAN group (802.1s)"],
+  ["LACP","—","Data Link","Ethernet","EtherChannel negotiation 802.3ad"],
+  ["802.1Q","—","Data Link","Ethernet","VLAN tagging — 4096 VLANs"],
+  ["802.1X","—","Data Link","Ethernet","Port-based Network Access Control"],
+  ["IGMP","—","Network","IP","IPv4 multicast group membership"],
+  ["PIM-SM","—","Network","IP","Sparse-mode multicast routing"],
+];
+protos.forEach(p=>addIdx(p[0],'Protocol',p[4],'#protocols'));
+let sortCol=0,sortDir=1;
+function renderP(data){
+  const tb=document.getElementById('ptbody');tb.innerHTML='';
+  data.forEach(r=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td><strong>${r[0]}</strong></td><td class="port">${r[1]}</td><td><span class="lbdg">${r[2]}</span></td><td style="color:var(--ac3)">${r[3]}</td><td style="color:var(--mut)">${r[4]}</td>`;
+    tb.appendChild(tr);
+  });
+}
+function filterP(){
+  const q=document.getElementById('psrch').value.toLowerCase();
+  const d=q?protos.filter(r=>r.join('|').toLowerCase().includes(q)):[...protos];
+  d.sort((a,b)=>a[sortCol].localeCompare(b[sortCol])*sortDir);renderP(d);
+}
+function sortP(col){
+  if(sortCol===col)sortDir*=-1;else{sortCol=col;sortDir=1}
+  for(let i=0;i<4;i++)document.getElementById(`sa${i}`).textContent=i===col?(sortDir===1?'↑':'↓'):'↕';
+  filterP();
+}
+renderP(protos);
+
+// ── SUBNET ───────────────────────────────────────────
+function valIP(inp){
+  const ok=/^(\d{1,3}\.){3}\d{1,3}$/.test(inp.value)&&inp.value.split('.').every(o=>+o<=255);
+  inp.classList.toggle('err',!ok);document.getElementById('iperr').style.display=ok?'none':'block';return ok;
+}
+function calcS(){
+  const inp=document.getElementById('ipinp');
+  if(!valIP(inp))return;
+  const parts=inp.value.split('.').map(Number);
+  const cidr=+document.getElementById('cidrinp').value;
+  const ipN=((parts[0]<<24)|(parts[1]<<16)|(parts[2]<<8)|parts[3])>>>0;
+  const mN=cidr===0?0:(~0<<(32-cidr))>>>0;
+  const netN=(ipN&mN)>>>0,bcN=(netN|(~mN>>>0))>>>0;
+  const tot=Math.pow(2,32-cidr),use=cidr<31?tot-2:(cidr===31?2:1);
+  const n2ip=n=>[(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255].join('.');
+  const priv=(parts[0]===10)||(parts[0]===172&&parts[1]>=16&&parts[1]<=31)||(parts[0]===192&&parts[1]===168);
+  const cls=parts[0]<128?'A':parts[0]<192?'B':parts[0]<224?'C':parts[0]<240?'D (Multicast)':'E';
+  const res=[{l:'Network',v:n2ip(netN)},{l:'Subnet Mask',v:n2ip(mN)},{l:'CIDR',v:'/'+cidr},
+    {l:'Broadcast',v:n2ip(bcN)},{l:'First Host',v:n2ip(cidr<31?netN+1:netN)},{l:'Last Host',v:n2ip(cidr<31?bcN-1:bcN)},
+    {l:'Total IPs',v:tot.toLocaleString()},{l:'Usable Hosts',v:use.toLocaleString()},
+    {l:'Wildcard',v:n2ip(~mN>>>0)},{l:'IP Class',v:cls},
+    {l:'RFC 1918?',v:priv?'✓ Private':'✗ Public'},
+    {l:'Binary Mask',v:n2ip(mN).split('.').map(o=>(+o).toString(2).padStart(8,'0')).join('.')}];
+  document.getElementById('sres').innerHTML=res.map(r=>`<div class="src"><div class="rl">${r.l}</div><div class="rv">${r.v}</div></div>`).join('');
+  toast(`/${cidr} calculated`,'success','🔢');
+}
+calcS();
+
+// ── QUIZ (AI-powered infinite) ───────────────────────────────────────────
+(function(){
+  'use strict';
+  const S={
+    category:'OSI Model',difficulty:'beginner',
+    question:null,selected:null,revealed:false,loading:false,
+    score:{correct:0,total:0},streak:0,usedTopics:[],history:[],histOpen:false
+  };
+  const $=id=>document.getElementById(id);
+  const SYSPROMPT=`You are a networking expert generating quiz questions for network engineers and students.
+Generate exactly one multiple-choice question as a JSON object:
+{"question":"...","options":["A) ...","B) ...","C) ...","D) ..."],"answer":"A","explanation":"2-3 sentence explanation"}
+Rules: answer must be exactly A B C or D. Questions must be practical and varied. Return ONLY the JSON, no markdown.`;
+
+  async function fetchQ(){
+    S.loading=true;S.question=null;S.selected=null;S.revealed=false;
+    render();
+    const avoid=S.usedTopics.length?`\n\nAvoid these topics: ${S.usedTopics.slice(-10).join('; ')}` :'';
+    const msg=`Generate a ${S.difficulty} level networking quiz question about: ${S.category}.${avoid}`;
+    try{
+      const res=await fetch('https://api.anthropic.com/v1/messages',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,system:SYSPROMPT,
+          messages:[{role:'user',content:msg}]})
+      });
+      const data=await res.json();
+      const raw=(data.content||[]).map(b=>b.text||'').join('').trim();
+      const parsed=JSON.parse(raw.replace(/```json|```/g,'').trim());
+      if(!parsed.question||!parsed.options||!parsed.answer||!parsed.explanation)throw new Error('bad format');
+      S.question={...parsed,category:S.category,difficulty:S.difficulty};
+      S.usedTopics=[...S.usedTopics,parsed.question.slice(0,60)];
+      S.loading=false;render();
+    }catch(e){
+      S.loading=false;S.question=null;renderErr('Failed to generate question. Please try again.');
+    }
+  }
+
+  function show(el){if(el)el.style.display=''}
+  function hide(el){if(el)el.style.display='none'}
+  function flex(el){if(el)el.style.display='flex'}
+
+  function render(){
+    const {correct,total}=S.score;
+    $('qz-score').textContent=`${correct}/${total}`;
+    const pct=total>0?Math.round(correct/total*100):null;
+    $('qz-pct').textContent=pct!==null?`${pct}%`:'—';
+    if(total>0){show($('qprogwrap'));$('qprogbar').style.width=`${pct}%`;}
+    const sc=$('qz-streak-chip');
+    if(S.streak>=2){show(sc);$('qz-streak').textContent=S.streak;}else hide(sc);
+
+    if(S.loading){
+      show($('qloading'));hide($('qquestionarea'));hide($('qerr'));hide($('qz-actions'));return;
+    }
+    hide($('qloading'));hide($('qerr'));
+    if(!S.question)return;
+
+    const q=S.question;
+    $('qz-badge-cat').textContent=q.category;
+    const bd=$('qz-badge-diff');bd.textContent=q.difficulty;bd.dataset.diff=q.difficulty;
+    $('qz-question-text').textContent=q.question;
+
+    const oc=$('qz-options');oc.innerHTML='';
+    q.options.forEach(opt=>{
+      const btn=document.createElement('button');
+      btn.className='qo2';btn.textContent=opt;
+      if(S.revealed){
+        if(opt.startsWith(q.answer+')')){btn.classList.add('correct');}
+        else if(opt===S.selected){btn.classList.add('wrong');}
+        btn.disabled=true;
+      } else {
+        if(opt===S.selected)btn.classList.add('selected');
+        btn.addEventListener('click',()=>{if(!S.revealed){S.selected=opt;render();}});
+      }
+      oc.appendChild(btn);
+    });
+
+    const exp=$('qz-explanation');
+    if(S.revealed){exp.innerHTML=`<b>Explanation:</b> ${q.explanation}`;show(exp);}
+    else hide(exp);
+
+    show($('qquestionarea'));
+    flex($('qz-actions'));
+
+    const cb=$('qz-check-btn');
+    if(S.revealed){
+      cb.textContent='Next Question →';cb.disabled=false;cb.onclick=()=>fetchQ();
+    } else {
+      cb.textContent='Check Answer';cb.disabled=!S.selected;cb.onclick=checkAns;
+    }
+  }
+
+  function renderErr(msg){
+    hide($('qloading'));hide($('qquestionarea'));hide($('qz-actions'));
+    $('qz-error-msg').textContent=msg;show($('qerr'));
+  }
+
+  function checkAns(){
+    if(!S.selected||!S.question)return;
+    S.revealed=true;
+    const ok=S.selected.startsWith(S.question.answer+')');
+    S.score.total++;if(ok)S.score.correct++;
+    S.streak=ok?S.streak+1:0;
+    S.history=[{question:S.question.question,correct:ok,category:S.question.category},...S.history.slice(0,19)];
+    renderHistory();render();
+  }
+
+  function resetQuiz(){
+    S.score={correct:0,total:0};S.streak=0;S.history=[];S.usedTopics=[];S.histOpen=false;
+    $('qprogwrap').style.display='none';$('qprogbar').style.width='0%';
+    renderHistory();fetchQ();
+  }
+
+  function renderHistory(){
+    const sec=$('qhistsec'),list=$('qhistlist');
+    if(S.history.length===0){hide(sec);return;}
+    show(sec);
+    $('qz-hist-toggle').textContent=`${S.histOpen?'\u25BE':'\u25B8'} Recent answers (${S.history.length})`;
+    list.style.display=S.histOpen?'flex':'none';
+    list.innerHTML=S.history.map(h=>`<div class="qhistitem"><div class="qdot ${h.correct?'qdot-ok':'qdot-no'}"></div><span>${h.question}</span></div>`).join('');
+  }
+
+  function init(){
+    document.querySelectorAll('.qdiff-btn').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        document.querySelectorAll('.qdiff-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');S.difficulty=btn.dataset.diff;fetchQ();
+      });
+    });
+    const cat=$('qz-category');
+    if(cat)cat.addEventListener('change',()=>{S.category=cat.value;fetchQ();});
+    $('qz-skip-btn').addEventListener('click',()=>fetchQ());
+    $('qz-reset-btn').addEventListener('click',resetQuiz);
+    $('qz-retry-btn').addEventListener('click',()=>fetchQ());
+    $('qz-hist-toggle').addEventListener('click',()=>{S.histOpen=!S.histOpen;renderHistory();});
+    fetchQ();
+  }
+
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+  else init();
+})();
+
+// ── CHEAT SHEET ──────────────────────────────────────
+const cheat=[
+  {h:"Subnet Masks",r:[["/8","255.0.0.0"],["/16","255.255.0.0"],["/24","255.255.255.0"],["/25","255.255.255.128"],["/26","255.255.255.192"],["/27","255.255.255.224"],["/28","255.255.255.240"],["/29","255.255.255.248"],["/30","255.255.255.252"],["/32","255.255.255.255"]]},
+  {h:"Usable Hosts",r:[["/16","65,534"],["/22","1,022"],["/23","510"],["/24","254"],["/25","126"],["/26","62"],["/27","30"],["/28","14"],["/29","6"],["/30","2"],["/31","2 (P-t-P)"],["/32","1 host route"]]},
+  {h:"Well-Known Ports",r:[["SSH","22 TCP"],["SMTP","25 TCP"],["DNS","53 UDP/TCP"],["HTTP","80 TCP"],["HTTPS","443 TCP"],["SNMP","161 UDP"],["BGP","179 TCP"],["RDP","3389 TCP"],["SIP","5060 UDP"],["WireGuard","51820 UDP"]]},
+  {h:"Routing AD Values",r:[["Connected","0"],["Static","1"],["EIGRP int","90"],["OSPF","110"],["IS-IS","115"],["RIP","120"],["EIGRP ext","170"],["eBGP","20"],["iBGP","200"]]},
+  {h:"Private IP (RFC 1918)",r:[["Class A","10.0.0.0/8"],["Class B","172.16.0.0/12"],["Class C","192.168.0.0/16"],["Loopback","127.0.0.0/8"],["APIPA","169.254.0.0/16"],["Multicast","224.0.0.0/4"]]},
+  {h:"STP Port States",r:[["Blocking","No fwd, no learn"],["Listening","No fwd, no learn"],["Learning","No fwd, learns MACs"],["Forwarding","Active"],["RSTP Discard","Block+Listen"],["RSTP Forward","Active"]]},
+  {h:"OSPF LSA Types",r:[["Type 1","Router LSA"],["Type 2","Network LSA"],["Type 3","Summary (ABR)"],["Type 4","ASBR Summary"],["Type 5","External (ASBR)"],["Type 7","NSSA External"]]},
+  {h:"BGP Decision Order",r:[["1. Weight","Cisco-only, highest"],["2. Local Pref","Highest preferred"],["3. AS Path","Shorter preferred"],["4. Origin","IGP>EGP>?"],["5. MED","Lowest preferred"],["6. eBGP>iBGP","Prefer eBGP"]]},
+  {h:"IPv6 Address Types",r:[["2000::/3","Global Unicast"],["fe80::/10","Link-Local (auto)"],["::1/128","Loopback"],["fc00::/7","Unique Local"],["ff00::/8","Multicast"],["ff02::1","All nodes"]]},
+  {h:"VPN / Crypto Reference",r:[["AES-256-GCM","Current best practice"],["DH Group 20","384-bit ECDH"],["DH Group 14","2048-bit MODP"],["ESP","Encrypt + Auth"],["AH","Auth only"],["PFS","New keys per session"]]},
+];
+cheat.forEach(c=>{
+  addIdx(c.h,'Cheat Sheet',c.r.map(r=>r.join(' ')).join(' '),'#cheat');
+  const el=document.createElement('div');el.className='chc';
+  el.innerHTML=`<div class="chh">${c.h}</div><table>${c.r.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table>`;
+  document.getElementById('chgrid').appendChild(el);
+});
+</script>
+</body></html>
